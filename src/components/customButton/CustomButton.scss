@@ -1,0 +1,25 @@
+@use "styles/Variables.scss";
+
+.custom-button-wrapper {
+  .button {
+    margin-right: 10px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-weight: 500;
+    color: var(--color-light);
+    cursor: pointer;
+    position: relative;
+    background: none;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 300ms ease-in-out;
+    &:hover {
+      position: relative;
+      color: var(--color-light);
+      box-shadow: var(--main-shadow);
+      scale: 1.1;
+    }
+  }
+}

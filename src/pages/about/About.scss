@@ -1,0 +1,64 @@
+@use "styles/Variables.scss";
+
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--second-color-dark);
+  transition: all 300ms ease-in-out;
+  padding-top: 120px;
+  .about-label {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 45px;
+    font-weight: 700;
+    font-size: 42px;
+    text-transform: uppercase;
+    .pre-label {
+      margin-right: 20px;
+      color: var(--color-dark);
+    }
+    .after-label {
+      color: var(--accent-color);
+    }
+  }
+  .about-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--main-color);
+    box-shadow: var(--header-shadow);
+    .about-content-width {
+      display: flex;
+      justify-content: space-between;
+      width: var(--desktop-max-width);
+      padding: 70px 0;
+      .about-text-wrapper {
+        color: var(--color-light);
+        margin-right: 150px;
+        .title-text {
+          font-weight: 500;
+          font-size: 42px;
+          line-height: 70px;
+          margin-bottom: 30px;
+        }
+        .main-tetx {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 30px;
+        }
+      }
+      .about-image {
+        background-image: url("../../assets/images/Illustration2.jpg");
+        background-size: cover;
+        min-width: 560px;
+        height: 390px;
+        border: 2px solid #ffffff;
+        filter: drop-shadow(0px 246px 99px rgba(21, 28, 30, 0.01)) drop-shadow(0px 139px 83px rgba(21, 28, 30, 0.05))
+          drop-shadow(0px 62px 62px rgba(21, 28, 30, 0.09)) drop-shadow(0px 15px 34px rgba(21, 28, 30, 0.1))
+          drop-shadow(0px 0px 0px rgba(21, 28, 30, 0.1));
+        border-radius: 5px;
+      }
+    }
+  }
+}
