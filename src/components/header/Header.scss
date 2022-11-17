@@ -9,8 +9,8 @@
   background-color: var(--second-color-dark);
   top: 0;
   box-shadow: var(--header-shadow);
-  transition: all 300ms ease-in-out;
   z-index: 1;
+  transition: all 300ms ease-in-out;
   &.active {
     height: 60px;
     .logo-light-theme {

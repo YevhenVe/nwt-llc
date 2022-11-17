@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import { ThemeContext } from "contexts/ThemeContext";
 import { ReactComponent as LightIcon } from "assets/icons/Light.svg";
 import { ReactComponent as DarkIcon } from "assets/icons/Dark.svg";
@@ -8,23 +8,7 @@ import "./Links.scss";
 
 const Links = () => {
   const [themeSwith, setThemeSwith] = useContext(ThemeContext);
-  const colorLight = "--color-light";
-  const colorDark = "--color-dark";
-  const secondColorDark = "--second-color-dark";
   const themeSwither = () => setThemeSwith(!themeSwith);
-
-  useEffect(() => {
-    localStorage.setItem("day-night", themeSwith);
-    if (themeSwith) {
-      document.documentElement.style.setProperty(colorLight, "rgba(45, 45, 45, 1)");
-      document.documentElement.style.setProperty(colorDark, "rgba(255, 255, 255, 1)");
-      document.documentElement.style.setProperty(secondColorDark, "rgba(46, 70, 78, 1)");
-    } else {
-      document.documentElement.style.setProperty(colorLight, "rgba(248, 249, 249, 1)");
-      document.documentElement.style.setProperty(colorDark, "rgba(45, 45, 45, 1)");
-      document.documentElement.style.setProperty(secondColorDark, "rgba(255, 255, 255, 1)");
-    }
-  }, [themeSwith]);
 
   return (
     <div className="links-wrapper">

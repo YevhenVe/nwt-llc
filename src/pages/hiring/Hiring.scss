@@ -1,0 +1,42 @@
+@use "styles/Variables.scss";
+
+.hiring-wrapper {
+  position: relative;
+  background-color: var(--second-color-dark);
+  padding-top: 120px;
+  .hiring-label {
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 42px;
+    text-transform: uppercase;
+    padding-bottom: 45px;
+    .pre-label {
+      margin-right: 20px;
+      color: var(--color-dark);
+    }
+    .after-label {
+      color: var(--accent-color);
+    }
+  }
+  .hiring-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 356px;
+    background-color: var(--main-color);
+    .textbox {
+      width: var(--desktop-max-width);
+      text-align: center;
+      font-weight: 500;
+      font-size: 42px;
+      color: var(--color-light);
+    }
+  }
+  .download-btn {
+    width: 100%;
+    text-align: center;
+    translate: 0 -15px;
+  }
+}
