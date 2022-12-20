@@ -5,6 +5,7 @@ import { ModalContext } from "contexts/ModalContext";
 import { ReactComponent as ArrowDownIcon } from "assets/icons/ArrowDown.svg";
 import "./Home.scss";
 import ModalWindow from "components/modalWindow/ModalWindow";
+import ContactForm from "components/contactForm/contactForm";
 
 const Home = () => {
   const [modal, setModal] = useContext(ModalContext);
@@ -31,7 +32,9 @@ const Home = () => {
       {modal && (
         <>
           <ModalWindow>
-            <div className="child" onClick={(e) => e.stopPropagation()} />
+            <div className="child" onClick={(e) => e.stopPropagation()}>
+              <ContactForm />
+            </div>
           </ModalWindow>
         </>
       )}

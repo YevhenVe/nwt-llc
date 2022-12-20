@@ -12,3 +12,24 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+
+.custom-react-cookie-banner {
+  backdrop-filter: blur(30px);
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  bottom: calc(50% - 125px);
+  height: 200px !important;
+  left: calc(50% - 150px);
+  position: fixed !important;
+  width: 300px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid var(--color-light);
+  .button-close {
+    position: unset !important;
+    font-weight: 600;
+    font-size: 24px;
+  }
+}

@@ -1,10 +1,10 @@
 import React from "react";
 import "./CustomButton.scss";
 
-const CustomButton = ({ label, onClick }) => {
+const CustomButton = ({ label, onClick, className }) => {
   return (
     <div className="custom-button-wrapper">
-      <button className="button" onClick={onClick}>
+      <button className={`button ${className}`} onClick={onClick}>
         {label}
       </button>
     </div>
