@@ -34,12 +34,17 @@
       font-size: 96px;
       line-height: 92.5%;
       margin-bottom: 40px;
+      @media screen and (max-width: 506px) {
+        font-size: 4rem;
+      }
     }
     .slogan {
       font-weight: 500;
-      font-size: 56px;
-      line-height: 84px;
+      font-size: 42px;
       margin-bottom: 100px;
+      @media screen and (max-width: 506px) {
+        font-size: 2rem;
+      }
     }
     .arrow-down {
       position: absolute;

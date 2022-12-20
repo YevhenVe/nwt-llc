@@ -25,6 +25,12 @@
   .content-wrapper {
     width: var(--desktop-max-width);
     text-align: center;
+    @media screen and (max-width: 1290px) {
+      width: 960px;
+    }
+    @media screen and (max-width: 986px) {
+      width: 100%;
+    }
     .team-text-wrapper {
       color: var(--color-dark);
       .title-text {

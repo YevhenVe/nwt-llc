@@ -20,7 +20,10 @@ const Home = () => {
           <br />
           Telecom
         </div>
-        <div className="slogan">We make it better</div>
+        <div className="slogan">
+          Do what you can, with what you have, <br />
+          where you are.
+        </div>
         <CustomButton label="GET STARTED" onClick={() => modalSwither()} />
 
         <Link className="link" activeClass="active" to="about" smooth spy offset={-59} duration={300}>

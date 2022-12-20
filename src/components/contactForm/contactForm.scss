@@ -5,8 +5,14 @@
   background-color: var(--main-color);
   padding: 40px;
   border-radius: 5px;
+  @media screen and (max-width: 506px) {
+    border-radius: 0px;
+  }
   .mailform-wrapper {
     width: 400px;
+    @media screen and (max-width: 506px) {
+      width: 100%;
+    }
     #form {
       display: flex;
       flex-direction: column;
