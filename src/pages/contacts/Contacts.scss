@@ -1,12 +1,15 @@
 @use "styles/Variables.scss";
 
 .contacts-wrapper {
+  position: relative;
   display: flex;
-  justify-content: center;
-  padding: 120px 0;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px 0 240px 0;
   background-color: var(--second-color-dark);
   .contacts-box {
     display: flex;
+    justify-content: space-between;
     width: var(--desktop-max-width);
     .side-left {
       .contacts-label {
@@ -41,6 +44,7 @@
         }
         .work-time {
           margin: 24px 0;
+          color: var(--color-dark);
         }
       }
       .follow-us {
@@ -57,7 +61,29 @@
         }
       }
     }
-    .side-right {
+  }
+  .map {
+    margin-top: 100px;
+    width: 100%;
+    height: 600px;
+    border: 0;
+  }
+  .office-image {
+    position: absolute;
+    overflow: hidden;
+    width: 425px;
+    height: 295px;
+    bottom: 120px;
+    right: 15%;
+    border-radius: 5px;
+    border: solid 2px var(--color-light);
+    filter: drop-shadow(0px 246px 99px rgba(21, 28, 30, 0.01)) drop-shadow(0px 139px 83px rgba(21, 28, 30, 0.05))
+      drop-shadow(0px 62px 62px rgba(21, 28, 30, 0.09)) drop-shadow(0px 15px 34px rgba(21, 28, 30, 0.1))
+      drop-shadow(0px 0px 0px rgba(21, 28, 30, 0.1));
+    img {
+      width: 100%; /* image box size as % of container, see step 1 */
+      height: 100%; /* image box size as % of container, see step 1 */
+      object-fit: cover; /* matching of image pixels to image box, see step 2 */
     }
   }
 }

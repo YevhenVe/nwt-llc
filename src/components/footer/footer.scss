@@ -1,0 +1,15 @@
+@use "styles/Variables.scss";
+
+.footer-wrapper {
+  height: 200px;
+  width: 100%;
+  background-color: var(--main-color);
+  .footer-content {
+    .footer-logo {
+    }
+    .footer-copyright {
+    }
+    .footer-links {
+    }
+  }
+}

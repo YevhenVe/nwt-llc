@@ -1,0 +1,49 @@
+@use "styles/Variables.scss";
+
+.backplate {
+  position: relative;
+  background-color: var(--main-color);
+  padding: 40px;
+  border-radius: 5px;
+  .mailform-wrapper {
+    width: 400px;
+    #form {
+      display: flex;
+      flex-direction: column;
+      .field {
+        margin-bottom: 10px;
+        .MuiInputBase-root {
+          background-color: var(--second-color-dark);
+          input {
+            color: var(--color-dark);
+          }
+
+          input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+          input[type="file"]::-webkit-file-upload-button {
+            position: absolute;
+            visibility: hidden;
+          }
+          input[type="file"] {
+            cursor: pointer;
+            opacity: 0.5;
+          }
+        }
+        svg {
+          width: 18px;
+          height: 18px;
+          fill: var(--main-color);
+        }
+      }
+      .spam {
+        display: none;
+      }
+      .submit-button {
+        position: absolute;
+        bottom: -20px;
+      }
+    }
+  }
+}
