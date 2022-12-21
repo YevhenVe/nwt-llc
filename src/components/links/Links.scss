@@ -1,34 +1,64 @@
 @use "styles/Variables.scss";
 
-.links-wrapper {
-  display: flex;
-  align-items: center;
-  .link {
-    &.active {
+@media screen and (max-width: 960px) {
+  .links-wrapper {
+    display: none;
+  }
+  .hamburger-links-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 300ms ease-in-out;
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(30px);
+    padding: 40px 0;
+    box-shadow: 0px 10px 30px rgba($color: #000000, $alpha: 0.5);
+    .link {
+      margin-bottom: 30px;
       .button {
-        color: var(--color-light);
-        background-color: var(--main-color);
-        box-shadow: var(--main-shadow);
-        border-radius: 5px;
-        &:hover {
-          &::before {
-            content: "";
-            height: 0;
-            box-shadow: none;
-            z-index: -1;
-          }
-        }
+        margin-right: 0;
+      }
+      @media screen and (orientation: landscape) {
+        margin-bottom: 10px;
       }
     }
-  }
-  .light-dark-switcher {
-    display: flex;
-    align-items: center;
-    width: 24px;
-    cursor: pointer;
-    transition: all 300ms ease-in-out;
-    &:hover {
-      rotate: (22deg);
+    @media screen and (orientation: landscape) {
+      padding: 20px 0;
     }
+  }
+  .hamburger-switcher {
+    margin-right: 20px;
+    cursor: pointer;
+    .line,
+    .line-clicked {
+      width: 40px;
+      height: 4px;
+      border-radius: 2px;
+      background-color: var(--color-dark);
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      transition: all 200ms ease-in-out;
+    }
+    .one {
+      transform: rotate(45deg) translateY(9px);
+    }
+    .two {
+      transform: rotate(-45deg) translateY(-10px);
+    }
+  }
+  .hamburger-links-wrapper-off {
+    transform: translateX(-110%);
+    transition: all 300ms ease-in-out;
+  }
+}
+@media screen and (min-width: 960px) {
+  .hamburger-links-wrapper,
+  .hamburger-switcher {
+    display: none;
   }
 }

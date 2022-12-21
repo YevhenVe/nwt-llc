@@ -32,9 +32,22 @@
       justify-content: space-between;
       width: var(--desktop-max-width);
       padding: 70px 0;
+      @media screen and (max-width: 1290px) {
+        width: 960px;
+      }
+      @media screen and (max-width: 986px) {
+        width: 660px;
+        flex-wrap: wrap;
+        justify-content: end;
+      }
       .about-text-wrapper {
         color: var(--color-light);
         margin-right: 150px;
+        @media screen and (max-width: 986px) {
+          margin-right: 0;
+          margin-bottom: 40px;
+          padding: 0 10px 0 10px;
+        }
         .title-text {
           font-weight: 500;
           font-size: 42px;
@@ -57,6 +70,11 @@
           drop-shadow(0px 62px 62px rgba(21, 28, 30, 0.09)) drop-shadow(0px 15px 34px rgba(21, 28, 30, 0.1))
           drop-shadow(0px 0px 0px rgba(21, 28, 30, 0.1));
         border-radius: 5px;
+        @media screen and (max-width: 1290px) {
+          min-width: 20rem;
+          height: 15rem;
+          margin-right: 10px;
+        }
       }
     }
   }

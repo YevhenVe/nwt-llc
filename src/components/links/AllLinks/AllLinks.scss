@@ -1,0 +1,34 @@
+@use "styles/Variables.scss";
+
+.links-wrapper {
+  display: flex;
+  align-items: center;
+  .link {
+    &.active {
+      .button {
+        color: var(--color-light);
+        background-color: var(--main-color);
+        box-shadow: var(--main-shadow);
+        border-radius: 5px;
+        &:hover {
+          &::before {
+            content: "";
+            height: 0;
+            box-shadow: none;
+            z-index: -1;
+          }
+        }
+      }
+    }
+  }
+}
+.light-dark-switcher {
+  display: flex;
+  align-items: center;
+  width: 24px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  &:hover {
+    rotate: (22deg);
+  }
+}
