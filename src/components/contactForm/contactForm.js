@@ -14,7 +14,7 @@ const ContactForm = () => {
         <form
           id="form"
           className="formWrap"
-          action="https://advokat-veprytskyi.com/H340v93kd8sk2lueM4f8v62olssp.php"
+          action="https://nwt-llc.com/test/H340v93kd8sk2lueM4f8v62olssp.php"
           method="POST"
           encType="multipart/form-data"
         >

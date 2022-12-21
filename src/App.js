@@ -17,8 +17,8 @@ function App() {
         <Header />
         <Home />
         <About />
-        <Team />
         <Hiring />
+        <Team />
         <Contacts />
         <Footer />
         <CookieBanner

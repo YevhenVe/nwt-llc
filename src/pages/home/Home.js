@@ -24,7 +24,7 @@ const Home = () => {
           Do what you can, with what you have, <br />
           where you are.
         </div>
-        <CustomButton label="GET STARTED" onClick={() => modalSwither()} />
+        <CustomButton label="get hiring" onClick={() => modalSwither()} />
 
         <Link className="link" activeClass="active" to="about" smooth spy offset={-59} duration={300}>
           <div className="arrow-down">
@@ -35,7 +35,7 @@ const Home = () => {
       {modal && (
         <>
           <ModalWindow>
-            <div className="child" onClick={(e) => e.stopPropagation()}>
+            <div className="child" onClick={(e) => e?.stopPropagation()}>
               <ContactForm />
             </div>
           </ModalWindow>

@@ -17,11 +17,11 @@ const AllLinks = () => {
       <Link className="link" activeClass="active" to="about" smooth spy offset={-60} duration={300}>
         <CustomButtonHeader label="about us" />
       </Link>
-      <Link className="link" activeClass="active" to="team" smooth spy offset={-60} duration={300}>
-        <CustomButtonHeader label="team" />
-      </Link>
-      <Link className="link" activeClass="active" to="info" smooth spy offset={-55} duration={300}>
+      <Link className="link" activeClass="active" to="info" smooth spy offset={-60} duration={300}>
         <CustomButtonHeader label="info" />
+      </Link>
+      <Link className="link" activeClass="active" to="team" smooth spy offset={-55} duration={300}>
+        <CustomButtonHeader label="team" />
       </Link>
       <Link className="link" activeClass="active" to="contacts" smooth spy offset={-50} duration={300}>
         <CustomButtonHeader label="contacts" />

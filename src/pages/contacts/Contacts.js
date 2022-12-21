@@ -57,7 +57,7 @@ const Contacts = () => {
             <div className="after-label">us</div>
           </div>
           <div className="social-icons">
-            <a href="http://" target="_blank" rel="noopener noreferrer" title="Facebook">
+            <a href="https://www.facebook.com/nwtllc" target="_blank" rel="noopener noreferrer" title="Facebook">
               <FacebookIcon />
             </a>
             <a href="http://" target="_blank" rel="noopener noreferrer" title="Instagram">

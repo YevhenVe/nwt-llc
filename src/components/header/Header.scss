@@ -24,6 +24,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .logo-light-theme {
+      max-width: fit-content;
+      svg {
+        transition: all 300ms ease-in-out;
+      }
+    }
     @media screen and (max-width: 1330px) {
       padding: 0 10px 0 10px;
     }

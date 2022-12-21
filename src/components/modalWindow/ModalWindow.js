@@ -5,7 +5,7 @@ import "./ModalWindow.scss";
 const ModalWindow = ({ children }) => {
   const [modal, setModal] = useContext(ModalContext);
   const stopPropagation = (e) => {
-    e.stopPropagation();
+    e?.stopPropagation();
   };
 
   return (
