@@ -19,7 +19,9 @@ const Header = () => {
   return (
     <div className="header-wrapper" ref={headerWrapper}>
       <div className="header-content-wrapper">
-        <div className="logo-light-theme">{!themeSwith ? <LogoLightTheme /> : <LogoDarkTheme />}</div>
+        <a href="/">
+          <div className="logo-light-theme">{!themeSwith ? <LogoLightTheme /> : <LogoDarkTheme />}</div>
+        </a>
         <div className="links-buttons">
           <Links />
         </div>

@@ -1,37 +1,28 @@
 import CookieBanner from "react-cookie-banner";
-import { ThemeProvider } from "./contexts/ThemeContext";
-import { ModalProvider } from "./contexts/ModalContext";
-import Header from "./components/header/Header";
-import Home from "./pages/home/Home";
-import About from "./pages/about/About";
-import Team from "pages/team/Team";
-import Hiring from "pages/hiring/Hiring";
-import Contacts from "pages/contacts/Contacts";
-import Footer from "components/footer/footer";
+import { Routes, Route } from "react-router-dom";
+import NotFoundPage from "pages/notFoundPage/NotFoundPage";
+import Main from "pages/main/Main";
 import "./styles/Index.scss";
+import EmailSent from "pages/emailSent/EmailSent";
 
 function App() {
   return (
-    <ThemeProvider>
-      <ModalProvider>
-        <Header />
-        <Home />
-        <About />
-        <Hiring />
-        <Team />
-        <Contacts />
-        <Footer />
-        <CookieBanner
-          className="custom-react-cookie-banner"
-          message="NWT-LLC.COM using cookies!"
-          buttonMessage="Agree"
-          onAccept={() => {
-            alert("Thanks for understanding");
-          }}
-          cookie="user-has-accepted-cookies"
-        />
-      </ModalProvider>
-    </ThemeProvider>
+    <>
+      <Routes>
+        <Route path="/" exact element={<Main />} />
+        <Route path="/email-sent" exact element={<EmailSent />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+      <CookieBanner
+        className="custom-react-cookie-banner"
+        message="NWT-LLC.COM using cookies!"
+        buttonMessage="Agree"
+        onAccept={() => {
+          alert("Thanks for understanding");
+        }}
+        cookie="user-has-accepted-cookies"
+      />
+    </>
   );
 }
 
