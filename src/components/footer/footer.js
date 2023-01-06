@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "contexts/ThemeContext";
 import { ReactComponent as LogoIcon } from "assets/icons/LogoFooter.svg";
-import "./Footer.scss";
+import "./footer.scss";
 
 const Footer = () => {
   const [themeSwith] = useContext(ThemeContext);
