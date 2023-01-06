@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { ReactComponent as LocationIcon } from "assets/icons/Location.svg";
 import { ReactComponent as PhoneIcon } from "assets/icons/Phone.svg";
 import { ReactComponent as EmailIcon } from "assets/icons/Email.svg";
@@ -10,13 +11,14 @@ import ContactForm from "components/contactForm/contactForm";
 import "./Contacts.scss";
 
 const Contacts = () => {
+  const { t } = useTranslation();
   return (
     <div className="contacts-wrapper" name="contacts">
       <div className="contacts-box">
         <div className="side-left">
           <div className="contacts-label">
-            <div className="pre-label">contact</div>
-            <div className="after-label">us</div>
+            <div className="pre-label">{t("contact")}</div>
+            <div className="after-label">{t("us")}</div>
           </div>
           <div className="contacts-content">
             <div className="address">
@@ -53,14 +55,19 @@ const Contacts = () => {
             </div>
           </div>
           <div className="contacts-label follow-us">
-            <div className="pre-label">follow</div>
-            <div className="after-label">us</div>
+            <div className="pre-label">{t("follow")}</div>
+            <div className="after-label">{t("us")}</div>
           </div>
           <div className="social-icons">
             <a href="https://www.facebook.com/nwtllc" target="_blank" rel="noopener noreferrer" title="Facebook">
               <FacebookIcon />
             </a>
-            <a href="http://" target="_blank" rel="noopener noreferrer" title="Instagram">
+            <a
+              href="https://www.instagram.com/newworldtelecomllc"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Instagram"
+            >
               <InstagramIcon />
             </a>
             <a href="https://www.youtube.com/@officenwt" target="_blank" rel="noopener noreferrer" title="Youtube">

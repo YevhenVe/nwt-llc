@@ -1,14 +1,16 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import PersonalCard from "./PersonalCard/PersonalCard";
 import PersonalInfo from "./PersonalCard/PersonalData.json";
 import "./Team.scss";
 
 const Team = () => {
+  const { t } = useTranslation();
   return (
     <div className="team-wrapper" name="team">
       <div className="team-label">
-        <div className="pre-label">our</div>
-        <div className="after-label">team</div>
+        <div className="pre-label">{t("our")}</div>
+        <div className="after-label">{t("team")}</div>
       </div>
       <div className="content-wrapper">
         <div className="team-text-wrapper">
