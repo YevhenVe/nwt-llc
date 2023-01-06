@@ -1,12 +1,15 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
+
 import "./About.scss";
 
 const About = () => {
+  const { t } = useTranslation();
   return (
     <div className="about-wrapper" name="about">
       <div className="about-label">
-        <div className="pre-label">about</div>
-        <div className="after-label">us</div>
+        <div className="pre-label">{t("about")}</div>
+        <div className="after-label">{t("us")}</div>
       </div>
       <div className="about-content">
         <div className="about-content-width">

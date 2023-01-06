@@ -1,14 +1,23 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { ThemeContext } from "contexts/ThemeContext";
 import { Link } from "react-scroll";
 import CustomButtonHeader from "components/customButtonHeader/CustomButtonHeader";
 import { ReactComponent as LightIcon } from "assets/icons/Light.svg";
 import { ReactComponent as DarkIcon } from "assets/icons/Dark.svg";
+import SpainFlag from "../../../assets/images/spain.png";
+import USAFlag from "../../../assets/images/united-states.png";
+import { useTranslation } from "react-i18next";
 import "./AllLinks.scss";
 
 const AllLinks = () => {
   const [themeSwith, setThemeSwith] = useContext(ThemeContext);
+  const [lngswitch, setLngswitch] = useState("");
   const themeSwither = () => setThemeSwith(!themeSwith);
+  const { i18n } = useTranslation();
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language);
+  };
+
   return (
     <>
       <Link className="link" activeClass="active" to="home" smooth spy offset={-60} duration={300}>
@@ -32,6 +41,17 @@ const AllLinks = () => {
         onClick={() => themeSwither()}
       >
         {!themeSwith ? <LightIcon /> : <DarkIcon />}
+      </div>
+      <div className="language-switch" onClick={() => setLngswitch(!lngswitch)}>
+        {lngswitch ? (
+          <div onClick={() => changeLanguage("en")} title="Switch to English">
+            <img src={SpainFlag} alt="SP" />
+          </div>
+        ) : (
+          <div onClick={() => changeLanguage("sp")} title="Switch to Spanish">
+            <img src={USAFlag} alt="EN" />
+          </div>
+        )}
       </div>
     </>
   );
