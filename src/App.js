@@ -1,9 +1,9 @@
 import CookieBanner from "react-cookie-banner";
 import { Routes, Route } from "react-router-dom";
-import NotFoundPage from "pages/notFoundPage/NotFoundPage";
 import Main from "pages/main/Main";
-import "./styles/Index.scss";
+import NotFoundPage from "pages/notFoundPage/NotFoundPage";
 import EmailSent from "pages/emailSent/EmailSent";
+import "./styles/Index.scss";
 
 function App() {
   return (

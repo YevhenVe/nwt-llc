@@ -5,7 +5,7 @@ import { ReactComponent as EmailIcon } from "assets/icons/Email.svg";
 import { ReactComponent as FacebookIcon } from "assets/icons/Facebook.svg";
 import { ReactComponent as InstagramIcon } from "assets/icons/Instagram.svg";
 import { ReactComponent as YoutubeIcon } from "assets/icons/Youtube.svg";
-import officeImage from "assets/images/office-image.jpg";
+import OfficeImage from "../../../assets/images/office-image.jpg";
 import ContactForm from "components/contactForm/contactForm";
 import "./Contacts.scss";
 
@@ -78,7 +78,7 @@ const Contacts = () => {
         src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=34.08759885161106,%20-84.00113889999926+(New%20Word%20Telecom)&amp;t=k&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
       />
       <div className="office-image">
-        <img src={officeImage} alt="" />
+        <img src={OfficeImage} alt="" />
       </div>
     </div>
   );

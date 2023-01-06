@@ -34,7 +34,7 @@
           }
           input[type="file"] {
             cursor: pointer;
-            opacity: 0.5;
+            opacity: 0.4;
           }
         }
         svg {
@@ -50,6 +50,14 @@
         position: absolute;
         bottom: -20px;
       }
+      // .file-input-placeholder {
+      //   position: absolute;
+      //   top: 198px;
+      //   left: 80px;
+      //   opacity: 0.4;
+      //   pointer-events: none;
+      //   color: var(--color-dark);
+      // }
     }
   }
 }

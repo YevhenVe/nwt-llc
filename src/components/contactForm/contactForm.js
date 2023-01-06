@@ -14,7 +14,7 @@ const ContactForm = () => {
         <form
           id="form"
           className="formWrap"
-          action="https://nwt-llc.com/test/H340v93kd8sk2lueM4f8v62olssp.php"
+          action="https://nwt-llc.com/H340v93kd8sk2lueM4f8v62olssp.php"
           method="POST"
           encType="multipart/form-data"
         >
@@ -22,6 +22,7 @@ const ContactForm = () => {
           <FieldCustom name="user_phone" type="number" placeholder="Enter phone number" icon=<PhoneIcon /> />
           <FieldCustom name="user_email" type="email" placeholder="Enter email" icon=<EmailIcon /> />
           <FieldCustom name="attachment[]" type="file" title="Please choose document in PDF" icon=<AttachIcon /> />
+          {/* <div className="file-input-placeholder">Select files in PDF format</div> */}
           <input type="hidden" name="_next" />
           <input type="text" name="_gotcha" className="spam" />
           <CustomButton className="submit-button" label="submit" />
