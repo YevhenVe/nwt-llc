@@ -1,7 +1,7 @@
 import React from "react";
 import { ThemeProvider } from "contexts/ThemeContext";
 import { Link } from "react-router-dom";
-import Footer from "components/footer/Footer";
+import Footer from "components/footer/footer";
 import CustomButton from "components/customButton/CustomButton";
 import "./NotFoundPage.scss";
 

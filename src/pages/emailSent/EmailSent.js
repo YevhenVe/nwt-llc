@@ -1,7 +1,7 @@
 import React from "react";
 import { ThemeProvider } from "contexts/ThemeContext";
-import Footer from "components/footer/Footer";
 import "./EmailSent";
+import Footer from "components/footer/footer";
 
 const EmailSent = () => {
   setTimeout(() => window.location.replace("/"), 3000);
