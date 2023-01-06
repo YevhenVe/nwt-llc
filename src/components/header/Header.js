@@ -20,7 +20,7 @@ const Header = () => {
     <div className="header-wrapper" ref={headerWrapper}>
       <div className="header-content-wrapper">
         <a href="/">
-          <div className="logo-light-theme">{!themeSwith ? <LogoLightTheme /> : <LogoDarkTheme />}</div>
+          <div className="logo">{!themeSwith ? <LogoLightTheme /> : <LogoDarkTheme />}</div>
         </a>
         <div className="links-buttons">
           <Links />
