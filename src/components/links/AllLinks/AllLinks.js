@@ -11,11 +11,12 @@ import "./AllLinks.scss";
 
 const AllLinks = () => {
   const [themeSwith, setThemeSwith] = useContext(ThemeContext);
-  const [lngswitch, setLngswitch] = useState("");
+  const [lngswitch, setLngswitch] = useState(() => localStorage.getItem("language") === "sp");
   const themeSwither = () => setThemeSwith(!themeSwith);
   const { i18n } = useTranslation();
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
+    localStorage.setItem("language", language);
   };
 
   return (

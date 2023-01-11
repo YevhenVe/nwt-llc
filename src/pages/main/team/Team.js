@@ -14,11 +14,8 @@ const Team = () => {
       </div>
       <div className="content-wrapper">
         <div className="team-text-wrapper">
-          <div className="title-text">Lorem ipsum dolor sit amet consectetur.</div>
-          <div className="main-tetx">
-            Porta a facilisis venenatis vestibulum. Lobortis id commodo dictumst consectetur. Urna at quis quam mattis.
-            Amet volutpat ridiculus tortor consectetur viverra id sem enim quis.
-          </div>
+          <div className="title-text">{t("team title")}</div>
+          <div className="main-tetx">{t("team text")}</div>
         </div>
         <div className="personal-card-box">
           {PersonalInfo.map(({ id, position, name, image }) => (

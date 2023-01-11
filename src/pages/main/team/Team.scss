@@ -14,6 +14,11 @@
     font-weight: 700;
     font-size: 42px;
     text-transform: uppercase;
+    margin-bottom: 40px;
+    @media screen and (max-width: 986px) {
+      font-size: 32px;
+      line-height: 36px;
+    }
     .pre-label {
       margin-right: 20px;
       color: var(--accent-color);
@@ -36,7 +41,7 @@
       .title-text {
         font-weight: 500;
         font-size: 42px;
-        line-height: 70px;
+        line-height: 46px;
         margin-bottom: 30px;
       }
       .main-tetx {

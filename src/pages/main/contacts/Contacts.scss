@@ -35,6 +35,9 @@
         font-weight: 700;
         font-size: 42px;
         text-transform: uppercase;
+        @media screen and (max-width: 960px) {
+          font-size: 32px;
+        }
         .pre-label {
           margin-right: 20px;
           color: var(--accent-color);

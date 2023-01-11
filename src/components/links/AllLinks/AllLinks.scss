@@ -18,6 +18,9 @@
             z-index: -1;
           }
         }
+        &:last-child {
+          margin-right: 30px;
+        }
       }
     }
   }
@@ -31,6 +34,10 @@
   transition: all 300ms ease-in-out;
   &:hover {
     rotate: (22deg);
+  }
+  @media screen and (max-width: 960px) {
+    margin-right: 0px;
+    margin-bottom: 40px;
   }
 }
 .language-switch {

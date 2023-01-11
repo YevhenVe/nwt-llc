@@ -16,5 +16,15 @@
   "submit":"enviar",
   "Enter full name":"Nombre completo",
   "Enter phone number":"Introduzca el número de teléfono",
-  "Enter email":"Introducir correo electrónico"
+  "Enter email":"Introducir correo electrónico",
+  "about title":"En New World Telecom, nos dedicamos a prestar servicios de construcción de máxima calidad para el sector de las telecomunicaciones.",
+  "about text":"Con años de experiencia en el campo, nuestro equipo de expertos tiene los conocimientos y la experiencia necesarios para manejar cualquier proyecto, grande o pequeño. Estamos especializados en el diseño, la construcción y el mantenimiento de sistemas de comunicación inalámbrica, incluidas torres de telefonía móvil, sistemas de antenas distribuidas y redes de células pequeñas. Nuestro objetivo es garantizar que nuestros clientes dispongan de los sistemas más fiables y eficientes para satisfacer sus necesidades de comunicación.",
+  "team title":"En New World Telecom, creemos que nuestro equipo es uno de nuestros mayores activos.",
+  "team text":"Nuestro equipo está formado por profesionales altamente cualificados y certificados que se enorgullecen de su trabajo. La seguridad es nuestra principal prioridad, y nos comprometemos a completar todos los proyectos con los más altos estándares de la industria.",
+  "work time1":"Lun - Vie: 8:00 - 17:00",
+  "work time2":"Sáb - Dom: fin de semanac",
+  "E-mail sent":"Correo electrónico enviado",
+  "404 title":"Error, Página no encontrada",
+  "404 text":"Lo sentimos, pero la página solicitada está ocupada en este momento y no se puede encontrar.",
+  "Return to Home Page":"Volver a la página de inicio"
 }

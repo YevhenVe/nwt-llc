@@ -1,6 +1,6 @@
 {
   "home":"home",
-  "aboutus":"sobre au",
+  "aboutus":"about us",
   "team":"team",
   "contacts":"contacts",
   "about": "about",
@@ -16,6 +16,15 @@
   "submit":"submit",
   "Enter full name":"Enter full name",
   "Enter phone number":"Enter phone number",
-  "Enter email":"Enter email"
-
+  "Enter email":"Enter email",
+  "about title":"At New World Telecom, we are dedicated to providing top-quality construction services for the telecommunications industry.",
+  "about text":"With years of experience in the field, our team of experts has the knowledge and expertise needed to handle any project, big or small. We specialize in the design, construction, and maintenance of wireless communication systems, including cell towers, distributed antenna systems, and small cell networks. Our goal is to ensure that our clients have the most reliable and efficient systems in place to meet their communication needs.",
+  "team title":"At New World Telecom, we believe that our team is one of our greatest assets.",
+  "team text":"Our team is made up of highly skilled and certified professionals who take pride in their work. Safety is our top priority, and we are committed to completing all projects to the highest industry standards.",
+  "work time1":"Mon - Fri: 8:00 AM - 5:00 PM",
+  "work time2":"Sat - Sun: weekend",
+  "E-mail sent":"E-mail sent",
+  "404 title":"Error, Page Not Found",
+  "404 text":"We're sorry, but the requested page is all tied up at the moment, and cannot be found.",
+  "Return to Home Page":"Return to Home Page"
 }

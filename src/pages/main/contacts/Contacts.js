@@ -30,7 +30,7 @@ const Contacts = () => {
                   href="https://www.google.com/maps/place/34%C2%B005'13.4%22N+84%C2%B000'00.9%22W/@34.0870421,-84.0008002,19z/data=!3m1!4b1!4m5!3m4!1s0x0:0xc158c4fe39ca4cf2!8m2!3d34.087041!4d-84.000253"
                   target="blank"
                 >
-                  2410 Satellite Blvd NE, Buford, GA 30518, Suite E
+                  2400 Satellite Blvd NE, Buford, GA 30518, Suite E
                 </a>
               </div>
             </div>
@@ -51,7 +51,7 @@ const Contacts = () => {
               </div>
             </div>
             <div className="work-time">
-              Mon - Fri: 8:00 AM - 5:00 PM <br /> Sat - Sun: weekend
+              {t("work time1")} <br /> {t("work time2")}
             </div>
           </div>
           <div className="contacts-label follow-us">
@@ -82,7 +82,7 @@ const Contacts = () => {
       <iframe
         className="map"
         title="google map"
-        src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=34.08759885161106,%20-84.00113889999926+(New%20Word%20Telecom)&amp;t=k&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+        src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=34.08760926404868,%20-84.00087892734433+(New%20Word%20Telecom)&amp;t=k&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
       />
       <div className="office-image">
         <img src={OfficeImage} alt="" />
