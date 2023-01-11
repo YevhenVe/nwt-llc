@@ -1,16 +1,17 @@
-import React, { useContext } from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import CustomButton from "components/customButton/CustomButton";
 import { Link } from "react-scroll";
-import { ModalContext } from "contexts/ModalContext";
 import { ReactComponent as ArrowDownIcon } from "assets/icons/ArrowDown.svg";
-import "./Home.scss";
-import ModalWindow from "components/modalWindow/ModalWindow";
 import ContactForm from "components/contactForm/contactForm";
+import Modal from "@mui/material/Modal";
+import "./Home.scss";
 
 const Home = () => {
-  const [modal, setModal] = useContext(ModalContext);
-  const modalSwither = () => setModal(!modal);
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   const { t } = useTranslation();
 
   return (
@@ -26,22 +27,19 @@ const Home = () => {
           Do what you can, with what you have, <br />
           where you are.
         </div>
-        <CustomButton label="get hiring" onClick={() => modalSwither()} />
+        <CustomButton label="get hiring" onClick={handleOpen} />
         <Link className="link" activeClass="active" to="about" smooth spy offset={-59} duration={300}>
           <div className="arrow-down">
             <ArrowDownIcon />
           </div>
         </Link>
       </div>
-      {modal && (
+      <Modal open={open} onClose={handleClose}>
         <>
-          <ModalWindow>
-            <div className="child" onClick={(e) => e?.stopPropagation()}>
-              <ContactForm />
-            </div>
-          </ModalWindow>
+          <ContactForm />
+          <div className="child" />
         </>
-      )}
+      </Modal>
     </div>
   );
 };

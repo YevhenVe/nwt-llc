@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
     font-weight: 700;
+    flex-wrap: wrap;
     font-size: 42px;
     text-transform: uppercase;
     padding-bottom: 45px;
@@ -32,11 +33,15 @@
       font-weight: 500;
       font-size: 42px;
       color: var(--color-light);
+      @media screen and (max-width: 986px) {
+        font-size: 32px;
+        line-height: 36px;
+      }
     }
   }
   .download-btn {
     width: 100%;
     text-align: center;
-    translate: 0 -15px;
+    translate: 0 -20px;
   }
 }
