@@ -25,9 +25,15 @@ const Hiring = () => {
       </div>
       <Modal open={open} onClose={handleClose}>
         <>
-          <CustomButton className="margin-bottom" label="For team" onClick={handleOpen} />
-          <CustomButton className="margin-bottom" label="For single" onClick={handleOpen} />
-          <CustomButton label="For some one" onClick={handleOpen} />
+          <a href="/">
+            <CustomButton className="margin-bottom" label="For Individual" onClick={handleClose} />
+          </a>
+          <a href="/">
+            <CustomButton className="margin-bottom" label="For Crews" onClick={handleClose} />
+          </a>
+          <a href="/">
+            <CustomButton label="For Sub Contractors" onClick={handleClose} />
+          </a>
           <div className="child" />
         </>
       </Modal>
