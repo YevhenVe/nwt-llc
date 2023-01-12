@@ -1,12 +1,14 @@
 import React, { useContext, useState } from "react";
+import { Tooltip } from "@mui/material";
 import { ThemeContext } from "contexts/ThemeContext";
 import { Link } from "react-scroll";
-import CustomButtonHeader from "components/customButtonHeader/CustomButtonHeader";
+import { useTranslation } from "react-i18next";
 import { ReactComponent as LightIcon } from "assets/icons/Light.svg";
 import { ReactComponent as DarkIcon } from "assets/icons/Dark.svg";
+import { ReactComponent as TranslateIcon } from "assets/icons/Translate.svg";
+import CustomButtonHeader from "components/customButtonHeader/CustomButtonHeader";
 import SpainFlag from "../../../assets/images/spain.png";
 import USAFlag from "../../../assets/images/united-states.png";
-import { useTranslation } from "react-i18next";
 import "./AllLinks.scss";
 
 const AllLinks = () => {
@@ -43,17 +45,27 @@ const AllLinks = () => {
       >
         {!themeSwith ? <LightIcon /> : <DarkIcon />}
       </div>
-      <div className="language-switch" onClick={() => setLngswitch(!lngswitch)}>
-        {lngswitch ? (
-          <div onClick={() => changeLanguage("en")} title="Switch to English">
-            <img src={SpainFlag} alt="SP" />
-          </div>
-        ) : (
-          <div onClick={() => changeLanguage("sp")} title="Switch to Spanish">
-            <img src={USAFlag} alt="EN" />
-          </div>
-        )}
-      </div>
+      <Tooltip
+        title={
+          <>
+            <div className="language-switch" onClick={() => setLngswitch(!lngswitch)}>
+              <div onClick={() => changeLanguage("en")} title="Switch to English">
+                <img src={USAFlag} alt="EN" />
+                <span>English</span>
+              </div>
+              <div onClick={() => changeLanguage("sp")} title="Switch to Spanish">
+                <img src={SpainFlag} alt="SP" />
+                <span>Spanish</span>
+              </div>
+            </div>
+          </>
+        }
+        arrow
+      >
+        <div className="translate-icon">
+          <TranslateIcon />
+        </div>
+      </Tooltip>
     </>
   );
 };

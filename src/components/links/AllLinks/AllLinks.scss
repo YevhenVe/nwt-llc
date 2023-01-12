@@ -41,14 +41,34 @@
   }
 }
 .language-switch {
-  width: 30px;
   color: var(--color-dark);
+  font-size: 14px;
   cursor: pointer;
   div {
     display: flex;
     align-items: center;
+    transition: all 200ms ease-in-out;
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
     img {
       width: 30px;
     }
+    &:hover {
+      scale: 1.05;
+    }
+  }
+  span {
+    margin-left: 10px;
+  }
+}
+.translate-icon {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  svg {
+    fill: var(--color-dark);
+    width: 25px;
+    height: 25px;
   }
 }
