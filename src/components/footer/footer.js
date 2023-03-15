@@ -18,10 +18,14 @@ const Footer = () => {
           )}
         </div>
         <div className="footer-copyright">
+          <div className="footer-left" />
           <div className="copyright">
-            <div>
-              © nwt-llc.com {startYear} {startYear !== nextYear ? <>- {nextYear}</> : <></>}
-            </div>
+            © nwt-llc.com {startYear} {startYear !== nextYear ? <>- {nextYear}</> : <></>}
+          </div>
+          <div className="footer-right">
+            <a href="https://eugeneve.github.io/" target="blank" title="Web Developer Website">
+              Designed by EV
+            </a>
           </div>
         </div>
       </div>

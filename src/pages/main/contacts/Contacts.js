@@ -6,7 +6,6 @@ import { ReactComponent as EmailIcon } from "assets/icons/Email.svg";
 import { ReactComponent as FacebookIcon } from "assets/icons/Facebook.svg";
 import { ReactComponent as InstagramIcon } from "assets/icons/Instagram.svg";
 import { ReactComponent as YoutubeIcon } from "assets/icons/Youtube.svg";
-import OfficeImage from "../../../assets/images/office-image.jpg";
 import ContactForm from "components/contactForm/contactForm";
 import "./Contacts.scss";
 
@@ -59,15 +58,10 @@ const Contacts = () => {
             <div className="after-label">{t("us")}</div>
           </div>
           <div className="social-icons">
-            <a href="https://www.facebook.com/nwtllc" target="_blank" rel="noopener noreferrer" title="Facebook">
+            <a href="https://www.facebook.com/llc.nwt" target="_blank" rel="noopener noreferrer" title="Facebook">
               <FacebookIcon />
             </a>
-            <a
-              href="https://www.instagram.com/newworldtelecomllc"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Instagram"
-            >
+            <a href="https://www.instagram.com/nwt_llc" target="_blank" rel="noopener noreferrer" title="Instagram">
               <InstagramIcon />
             </a>
             <a href="https://www.youtube.com/@officenwt" target="_blank" rel="noopener noreferrer" title="Youtube">
@@ -76,16 +70,20 @@ const Contacts = () => {
           </div>
         </div>
         <div className="side-right">
-          <ContactForm />
+          <ContactForm className="text-aria-contacts" />
         </div>
       </div>
       <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d509.30527885825063!2d-84.001134!3d34.087467!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x75a68ad86afb1573!2sNew%20World%20Telecom%20LLC!5e1!3m2!1suk!2sus!4v1675354983583!5m2!1suk!2sus"
         className="map"
         title="google map"
-        src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=34.08760926404868,%20-84.00087892734433+(New%20Word%20Telecom)&amp;t=k&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-      />
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
+
       <div className="office-image">
-        <img src={OfficeImage} alt="" />
+        <img src="https://res.cloudinary.com/dgbuorqxd/image/upload/v1678901394/nwt_llc/office.jpg" alt="" />
       </div>
     </div>
   );

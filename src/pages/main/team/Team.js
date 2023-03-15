@@ -18,7 +18,7 @@ const Team = () => {
           <div className="main-tetx">{t("team text")}</div>
         </div>
         <div className="personal-card-box">
-          {PersonalInfo.map(({ id, position, name, image }) => (
+          {PersonalInfo.map(({ id, image, position, name }) => (
             <PersonalCard key={id} avatar={image} position={position} name={name} />
           ))}
         </div>

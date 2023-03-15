@@ -2,12 +2,12 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { TextField, InputAdornment } from "@mui/material";
 
-const FieldCustom = ({ name, type, placeholder, encType, icon, title }) => {
+const FieldCustom = ({ name, type, placeholder, encType, icon, title, children, required }) => {
   const { t } = useTranslation();
   return (
     <div className="field">
       <TextField
-        required
+        required={required}
         fullWidth
         id="searchTxt"
         placeholder={t(`${placeholder}`)}
@@ -22,6 +22,7 @@ const FieldCustom = ({ name, type, placeholder, encType, icon, title }) => {
           startAdornment: <InputAdornment position="start">{icon}</InputAdornment>,
         }}
       />
+      {children}
     </div>
   );
 };
