@@ -1,14 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import CustomButton from "components/customButton/CustomButton";
 import { useTranslation } from "react-i18next";
-import Modal from "@mui/material/Modal";
 import "./Hiring.scss";
 
 const Hiring = () => {
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
   const { t } = useTranslation();
 
   return (
@@ -18,25 +13,23 @@ const Hiring = () => {
         <div className="after-label">{t("info")}</div>
       </div>
       <div className="hiring-content-wrapper">
-        <div className="textbox">Lorem ipsum dolor sit amet consectetur.</div>
+        <div className="textbox">{t("onboarding package_title")}</div>
       </div>
       <div className="download-btn">
-        <CustomButton label="download" onClick={handleOpen} />
+        <a
+          href="https://drive.google.com/drive/folders/1E6Rh0KKtkPtl1bWjdkT5Q9yvyn8RlNYQ?usp=share_link"
+          target="blank"
+        >
+          <CustomButton label={t("hiring_button_ind")} />
+        </a>
+        <a
+          href="https://drive.google.com/drive/folders/1ugaOt8YTJimZnLLUAGovoIswx4LdHw94?usp=share_link"
+          target="blank"
+        >
+          <CustomButton label={t("hiring_button_sub")} />
+        </a>
+        <div className="child" />
       </div>
-      <Modal open={open} onClose={handleClose}>
-        <>
-          <a href="/">
-            <CustomButton className="margin-bottom" label="For Individual" onClick={handleClose} />
-          </a>
-          <a href="/">
-            <CustomButton className="margin-bottom" label="For Crews" onClick={handleClose} />
-          </a>
-          <a href="/">
-            <CustomButton label="For Sub Contractors" onClick={handleClose} />
-          </a>
-          <div className="child" />
-        </>
-      </Modal>
     </div>
   );
 };

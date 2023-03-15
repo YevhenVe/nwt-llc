@@ -70,3 +70,12 @@ code {
     color: var(--color-light);
   }
 }
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: var(--main-color);
+}

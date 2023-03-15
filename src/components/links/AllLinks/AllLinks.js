@@ -61,6 +61,7 @@ const AllLinks = () => {
           </>
         }
         arrow
+        enterTouchDelay={0}
       >
         <div className="translate-icon">
           <TranslateIcon />

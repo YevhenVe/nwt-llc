@@ -36,7 +36,42 @@ const Home = () => {
       </div>
       <Modal open={open} onClose={handleClose}>
         <>
-          <ContactForm />
+          <div className="modal-content">
+            <div className="requirements">
+              <div className="requirements-wrapper">
+                <div className="requirements-title">
+                  <h4>{t("requirements individual_0")}</h4>
+                </div>
+                <div className="requirements-content">
+                  <h4>{t("requirements individual_1")}</h4>
+                  <ul>
+                    <li>{t("requirements individual_2")}</li>
+                    <li>{t("requirements individual_3")}</li>
+                    <li>{t("requirements individual_4")}</li>
+                    <li>{t("requirements individual_5")}</li>
+                    <li>{t("requirements individual_6")}</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="requirements-wrapper">
+                <div className="requirements-title">
+                  <h4>{t("requirements subcontractors_0")}</h4>
+                </div>
+                <div className="requirements-content">
+                  <h4>{t("requirements individual_1")}</h4>
+                  <ul>
+                    <li>{t("requirements subcontractors_2")}</li>
+                    <li>{t("requirements individual_3")}</li>
+                    <li>{t("requirements individual_4")}</li>
+                    <li>{t("requirements individual_5")}</li>
+                    <li>{t("requirements individual_6")}</li>
+                    <li>{t("requirements subcontractors_7")}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <ContactForm />
+          </div>
           <div className="child" />
         </>
       </Modal>

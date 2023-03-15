@@ -3,24 +3,24 @@
     "id":1,
     "position": "CEO",
     "name": "Alex Muzraev",
-    "image": "https://st2.depositphotos.com/1006318/5909/v/600/depositphotos_59095205-stock-illustration-businessman-profile-icon.jpg"
+    "image": "https://res.cloudinary.com/dgbuorqxd/image/upload/v1678900325/nwt_llc/alexmuzraev.webp"
   },
   {
     "id":2,
-    "position": "Senior PM / CEO",
+    "position": "CEO / Senior PM",
     "name": "Valeriy Sychevski",
-    "image": "https://st2.depositphotos.com/1006318/5909/v/600/depositphotos_59095205-stock-illustration-businessman-profile-icon.jpg"
+    "image": "https://res.cloudinary.com/dgbuorqxd/image/upload/v1678900325/nwt_llc/valeriysichevskiy.webp"
   },
   {
     "id":3,
     "position": "Operation Manager",
     "name": "Vakhtang Gvenetadze",
-    "image": "https://st2.depositphotos.com/1006318/5909/v/600/depositphotos_59095205-stock-illustration-businessman-profile-icon.jpg"
+    "image": "https://res.cloudinary.com/dgbuorqxd/image/upload/v1678900325/nwt_llc/vakhtanggvenetadze.webp"
   },
   {
     "id":4,
-    "position": "HR",
-    "name": "Elijah Dyskin",
-    "image": "https://st2.depositphotos.com/1006318/5909/v/600/depositphotos_59095205-stock-illustration-businessman-profile-icon.jpg"
+    "position": "Project Manager",
+    "name": "Daniel Altman",
+    "image": "https://res.cloudinary.com/dgbuorqxd/image/upload/v1678900325/nwt_llc/danielaltman.webp"
   }
 ]
