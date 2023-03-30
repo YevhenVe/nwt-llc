@@ -79,3 +79,9 @@ code {
   border-radius: 5px;
   background: var(--main-color);
 }
+
+.MuiTabScrollButton-root {
+  svg {
+    fill: var(--color-dark);
+  }
+}
