@@ -1,4 +1,5 @@
 import React from "react";
+import { Tabs } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import PersonalCard from "./PersonalCard/PersonalCard";
 import PersonalInfo from "./PersonalCard/PersonalData.json";
@@ -6,6 +7,7 @@ import "./Team.scss";
 
 const Team = () => {
   const { t } = useTranslation();
+
   return (
     <div className="team-wrapper" name="team">
       <div className="team-label">
@@ -18,9 +20,19 @@ const Team = () => {
           <div className="main-tetx">{t("team text")}</div>
         </div>
         <div className="personal-card-box">
-          {PersonalInfo.map(({ id, image, position, name }) => (
-            <PersonalCard key={id} avatar={image} position={position} name={name} />
-          ))}
+          <Tabs
+            data-aos="fade-right"
+            TabIndicatorProps={{ style: { backgroundColor: "transparent" } }}
+            className="tabs"
+            value={0}
+            variant="scrollable"
+            scrollButtons
+            allowScrollButtonsMobile
+          >
+            {PersonalInfo.map(({ id, image, position, name }) => (
+              <PersonalCard key={id} avatar={image} position={position} name={name} />
+            ))}
+          </Tabs>
         </div>
       </div>
     </div>

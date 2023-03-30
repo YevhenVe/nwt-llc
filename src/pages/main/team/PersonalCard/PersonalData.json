@@ -13,14 +13,20 @@
   },
   {
     "id":3,
-    "position": "Operation Manager",
-    "name": "Vakhtang Gvenetadze",
-    "image": "https://res.cloudinary.com/dgbuorqxd/image/upload/v1678900325/nwt_llc/vakhtanggvenetadze.webp"
+    "position": "Safety Manager",
+    "name": "Jody Anderson",
+    "image": "https://res.cloudinary.com/dgbuorqxd/image/upload/v1680122581/nwt_llc/anderson.jpg"
   },
   {
     "id":4,
     "position": "Project Manager",
     "name": "Daniel Altman",
     "image": "https://res.cloudinary.com/dgbuorqxd/image/upload/v1678900325/nwt_llc/danielaltman.webp"
+  },
+  {
+    "id":5,
+    "position": "Project Manager",
+    "name": "Brian Gray",
+    "image": "https://res.cloudinary.com/dgbuorqxd/image/upload/v1678900325/nwt_llc/valeriysichevskiy.webp"
   }
 ]
