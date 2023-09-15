@@ -5,22 +5,30 @@
   background-color: var(--main-color);
   padding: 40px;
   border-radius: 5px;
+
   @media screen and (max-width: 506px) {
     max-width: 320px;
   }
+
   .mailform-wrapper {
     width: 400px;
+
     @media screen and (max-width: 506px) {
       width: 100%;
       max-width: 320px;
     }
+
     #form {
       display: flex;
       flex-direction: column;
+      width: 100%;
+
       .field {
         margin-bottom: 10px;
+
         .MuiInputBase-root {
           background-color: var(--second-color-dark);
+
           input {
             color: var(--color-dark);
           }
@@ -29,28 +37,34 @@
             -webkit-appearance: none;
             margin: 0;
           }
+
           input[type="file"]::-webkit-file-upload-button {
             position: absolute;
             visibility: hidden;
           }
+
           input[type="file"] {
             cursor: pointer;
             opacity: 0.4;
           }
         }
+
         svg {
           width: 18px;
           height: 18px;
           fill: var(--main-color);
         }
       }
+
       .spam {
         display: none;
       }
+
       .submit-button {
         position: absolute;
         bottom: -20px;
       }
+
       .text-area {
         margin-bottom: 10px;
         border-radius: 5px;
@@ -61,18 +75,34 @@
         height: 12vh;
         color: var(--color-dark);
         background-color: var(--second-color-dark);
+
         &::placeholder {
           opacity: 0.5;
           color: var(--color-dark);
         }
       }
+
       .text-aria-contacts {
         position: relative;
         height: 80px;
+
         &::placeholder {
           opacity: 0;
         }
       }
+
+      .after-text {
+        margin-top: 15px;
+        color: var(--color-light);
+        font-size: .7rem;
+      }
     }
   }
+
+  .training-contact-form-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
 }

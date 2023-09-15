@@ -10,12 +10,9 @@ const Header = () => {
   const headerWrapper = useRef(null);
   const header = useRef(null);
   onscroll = function changeHeaderColor() {
-    window.scrollY >= 50
-      ? headerWrapper.current?.classList.add("active")
-      : headerWrapper.current?.classList.remove("active");
+    window.scrollY >= 50 ? headerWrapper.current?.classList.add("active") : headerWrapper.current?.classList.remove("active");
     window.scrollY >= 50 ? header.current?.classList.add("active") : header.current?.classList.remove("active");
   };
-
   return (
     <div className="header-wrapper" ref={headerWrapper}>
       <div className="header-content-wrapper">
