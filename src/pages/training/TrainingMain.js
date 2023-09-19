@@ -3,7 +3,7 @@ import { ThemeProvider } from "contexts/ThemeContext";
 import { useTranslation } from "react-i18next";
 import Header from "components/header/Header";
 import Footer from "components/footer/footer";
-import TrainingProgramm from "./trainingProgramm/TrainingProgramm";
+import TrainingProgram from "./trainingProgram/TrainingProgram";
 import TrainingContactForm from "pages/training/trainingContacts/TrainingContactForm";
 import "./TrainingMain.scss";
 
@@ -13,7 +13,7 @@ const TrainingMain = () => {
     <ThemeProvider>
       <Header />
       <TrainingContactForm />
-      <TrainingProgramm />
+      <TrainingProgram />
       <Footer />
     </ThemeProvider>
   );

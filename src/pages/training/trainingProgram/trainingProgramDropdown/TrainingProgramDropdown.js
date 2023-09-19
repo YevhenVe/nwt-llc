@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { ReactComponent as ArrowDownIcon } from "assets/icons/ArrowDown.svg";
-import "./TrainingProgrammDropdown.scss";
+import "./TrainingProgramDropdown.scss";
 
-const TrainingProgrammDropdown = (props) => {
+const TrainingProgramDropdown = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="training-programm-dropdown-wrapper">
-      <div className="training-programm-title">
+    <div className="training-program-dropdown-wrapper">
+      <div className="training-program-title">
         <h3>{props.label}</h3>
       </div>
       <div className="dropdown-button" onClick={() => setIsOpen(!isOpen)}>
@@ -30,4 +30,4 @@ const TrainingProgrammDropdown = (props) => {
   );
 };
 
-export default TrainingProgrammDropdown;
+export default TrainingProgramDropdown;
