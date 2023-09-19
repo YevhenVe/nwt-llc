@@ -1,0 +1,48 @@
+@use "styles/Variables.scss";
+
+.training-programm-dropdown-wrapper {
+    margin-bottom: 15px;
+
+    .training-programm-title {}
+
+    .dropdown-button {
+        margin: 5px 0 15px 0;
+
+        .training-button {
+            display: flex;
+            cursor: pointer;
+
+            p {
+                margin-right: 10px;
+            }
+
+            .arrow-down {
+                display: flex;
+                align-items: center;
+                transition: all 200ms;
+
+                svg {
+                    fill: var(--color-dark);
+                    width: 17px;
+                }
+            }
+
+            .arrow-down-closed {
+                transform: rotateZ(180deg);
+            }
+        }
+    }
+
+    .dropdown-content {
+        img {
+            border-radius: 15px;
+            margin-bottom: 25px;
+            max-width: 500px;
+        }
+
+        P {
+            text-indent: 20px;
+            margin-bottom: 5px;
+        }
+    }
+}

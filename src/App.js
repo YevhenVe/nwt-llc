@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Main from "pages/main/Main";
 import NotFoundPage from "pages/notFoundPage/NotFoundPage";
 import EmailSent from "pages/emailSent/EmailSent";
-import TrainingContactForm from "pages/training/TrainingContactForm";
+import Training from "pages/training/TrainingMain";
 import "./styles/Index.scss";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         <Route path="/" exact element={<Main />} />
         <Route path="/email-sent" exact element={<EmailSent />} />
         <Route path="*" element={<NotFoundPage />} />
-        <Route path="/training" element={<TrainingContactForm />} />
+        <Route path="/training" element={<Training />} />
       </Routes>
       <CookieBanner
         className="custom-react-cookie-banner"
