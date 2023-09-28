@@ -3,30 +3,30 @@
     "id":1,
     "position": "CEO",
     "name": "Alex Muzraev",
-    "image": "https://res.cloudinary.com/dgbuorqxd/image/upload/v1678900325/nwt_llc/alexmuzraev.webp"
+    "image": "https://nwt-llc.com/teamphotos/alexmuzraev.webp"
   },
   {
     "id":2,
     "position": "CEO / Senior PM",
     "name": "Valeriy Sychevski",
-    "image": "https://res.cloudinary.com/dgbuorqxd/image/upload/v1678900325/nwt_llc/valeriysichevskiy.webp"
+    "image": "https://nwt-llc.com/teamphotos/valeriysichevskiy.webp"
   },
   {
     "id":3,
     "position": "Safety Manager",
     "name": "Jody Anderson",
-    "image": "https://res.cloudinary.com/dgbuorqxd/image/upload/v1680122581/nwt_llc/anderson.jpg"
+    "image": "https://nwt-llc.com/teamphotos/anderson.webp"
   },
   {
     "id":4,
     "position": "Project Manager",
     "name": "Daniel Altman",
-    "image": "https://res.cloudinary.com/dgbuorqxd/image/upload/v1678900325/nwt_llc/danielaltman.webp"
+    "image": "https://nwt-llc.com/teamphotos/danielaltman.webp"
   },
   {
     "id":5,
     "position": "Project Manager",
     "name": "Brian Gray",
-    "image": "https://res.cloudinary.com/dgbuorqxd/image/upload/v1678900325/nwt_llc/valeriysichevskiy.webp"
+    "image": "https://nwt-llc.com/teamphotos/gray.webp"
   }
 ]
