@@ -93,12 +93,13 @@ const Contacts = () => {
             </div>
             <iframe
                 className="map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3304.2995026638605!2d-84.00348412370126!3d34.0874671158685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5959a5794f9df%3A0x75a68ad86afb1573!2sNew%20World%20Telecom%20LLC!5e0!3m2!1suk!2sus!4v1698159213076!5m2!1suk!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d826.0757534656881!2d-84.00102474478838!3d34.08737889799626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5959a5794f9df%3A0x75a68ad86afb1573!2sNew%20World%20Telecom%20LLC!5e0!3m2!1sen!2sus!4v1699551204403!5m2!1sen!2sus"
                 width="100%"
                 height="600"
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
+                title="2400 Satellite Blvd Suite E, Buford, GA 30518"
             ></iframe>
             <div className="office-image">
                 <img
