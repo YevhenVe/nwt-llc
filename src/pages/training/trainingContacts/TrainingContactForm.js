@@ -12,22 +12,26 @@ const TrainingContactForm = () => {
             <div className="training-wrapper">
                 <div className="training-main-title">
                     <div className="training-main-title-content">
-                        <b>NWT Training Academy</b> provides techs with the training needed to become an employable Coax Splicing Technician.
-                        <br />
-                        <br /> <b>The 2-weeks course is comprised of:</b>
+                        <div className="training-label">
+                            <b>NWT Training Academy</b> provides techs with the training needed to become an employable Coax Splicing Technician.
+                        </div>
+                        <br /> <b>The 2-week course at our Buford GA facility is comprised of:</b>
                         <br />
                         <div className="training-price-box">Price: $999</div>
                         <ul className="training-list">
                             <li>Day 1: Overview and Theory / Equipment / Tools</li>
                             <li>Day 2: Genesis Specific Training</li>
                             <li>Day 3: High-Split Specific Training</li>
-                            <li>Day 4: (Jenksinsburg) Hands on and Bucket Safety</li>
-                            <li>Day 5: Hot Splice and Testing</li>
+                            <li>Day 4: Hands on plus Bucket Safety Training (Jenksinsburg GA)</li>
+                            <li>Day 5: Hot Splice / Balancing and troubleshooting (Competency Exam)</li>
+                            <br />
+                            <li>Week 2 - Live shadowing of our in-house crews on a actual project</li>
                         </ul>
-                        <br /> After completion of our 5-day training program, we can offer an opportunity to shadow on a live project with one of our in-house crews.
-                        <br /> <br />
+                        <br />
+                        <br />
                         <b>Feel free to fill out the form and somebody will be in touch to discuss options.</b>
                         <div className="training-ps">
+                            <br />
                             <br /> Onward & Upward,
                             <br /> NWT Academy
                         </div>
@@ -36,10 +40,10 @@ const TrainingContactForm = () => {
                 <div className="training-content-wrapper">
                     <div className="trainig-content">
                         <div className="training-title">
-                            <span>
+                            <h1>
                                 {t(`${"contact"}`)}&nbsp;
                                 {t(`${"us"}`)}
-                            </span>
+                            </h1>
                         </div>
                         <div className="trining-contact-wrapper">
                             <div className="training-photos">
