@@ -1,17 +1,15 @@
 @use "styles/Variables.scss";
 
 .training-program-wrapper {
-    margin-top: 120px;
     display: flex;
     justify-content: center;
 
     .training-program-content {
-        margin: 50px 0;
         padding: 0 25px;
         max-width: var(--desktop-max-width);
         width: 100%;
         color: var(--color-dark);
-
+        margin-bottom: 120px;
         h1 {
             margin-bottom: 50px;
             text-align: center;

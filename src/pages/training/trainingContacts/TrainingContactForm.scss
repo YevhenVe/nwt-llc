@@ -1,15 +1,14 @@
 @use "styles/Variables.scss";
 
 .training-wrapper {
-    margin: 120px 0 120px 0;
+    margin-top: 120px;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     .training-main-title {
         text-align: center;
-        margin-bottom: 25px;
+        margin-bottom: 45px;
         color: var(--color-light);
         background-color: var(--main-color);
         width: 100%;
@@ -23,6 +22,14 @@
             .training-ps {
                 text-align: left;
             }
+            .training-price-box {
+                border-radius: 10px;
+                font-weight: 600;
+                width: fit-content;
+                padding: 10px 20px;
+                margin: 25px 0 25px 20px;
+                background-color: var(--accent-color);
+            }
         }
 
         .training-list {
@@ -34,13 +41,11 @@
         width: 100%;
         display: flex;
         justify-content: center;
-
         .trainig-content {
             display: flex;
             align-items: center;
             flex-direction: column;
             width: var(--desktop-max-width);
-
             .training-title {
                 text-align: center;
                 margin-bottom: 25px;
@@ -51,8 +56,6 @@
                     font-size: 22px;
                     font-weight: 600;
                 }
-
-
             }
 
             .trining-contact-wrapper {
@@ -60,13 +63,13 @@
                 flex-wrap: wrap;
                 justify-content: center;
                 position: relative;
-
+                width: 100%;
+                margin-bottom: 60px;
                 .training-photos {
                     margin: 0 15px;
-
                     img {
-                        width: 32vw;
-                        filter: drop-shadow(0 7px 10px rgba(0, 0, 0, .2));
+                        width: 30vw;
+                        filter: drop-shadow(0 7px 10px rgba(0, 0, 0, 0.2));
 
                         @media screen and (max-width: 506px) {
                             width: 100%;
@@ -77,6 +80,17 @@
 
                 .contact-form {
                     margin: 0 15px;
+                    width: 50%;
+                    overflow-y: hidden;
+                    @media screen and (max-width: 506px) {
+                        width: 100%;
+                    }
+                    iframe {
+                        height: 100%;
+                        width: 100%;
+                        @media screen and (max-width: 506px) {
+                        }
+                    }
                 }
             }
         }

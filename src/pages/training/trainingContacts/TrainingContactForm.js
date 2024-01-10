@@ -14,16 +14,17 @@ const TrainingContactForm = () => {
                     <div className="training-main-title-content">
                         <b>NWT Training Academy</b> provides techs with the training needed to become an employable Coax Splicing Technician.
                         <br />
-                        <br /> <b>The 4-weeks course is comprised of:</b>
+                        <br /> <b>The 2-weeks course is comprised of:</b>
                         <br />
-                        <br />
+                        <div className="training-price-box">Price: $999</div>
                         <ul className="training-list">
-                            <li>1-Week in our Buford GA facility with a mix of theory and hands on training</li>
-                            <li>1-Week in Maryland at a facility setup to replicate real world scenarios and challenges</li>
-                            <li>2-Week shadowing an active field project working side-by-side with techs.</li>
+                            <li>Day 1: Overview and Theory / Equipment / Tools</li>
+                            <li>Day 2: Genesis Specific Training</li>
+                            <li>Day 3: High-Split Specific Training</li>
+                            <li>Day 4: (Jenksinsburg) Hands on and Bucket Safety</li>
+                            <li>Day 5: Hot Splice and Testing</li>
                         </ul>
-                        <br /> Alongside the tech training we can provide the logistical & administrative training needed to successfully break into <br />
-                        this field and manage projects (Field CM role).
+                        <br /> After completion of our 5-day training program, we can offer an opportunity to shadow on a live project with one of our in-house crews.
                         <br /> <br />
                         <b>Feel free to fill out the form and somebody will be in touch to discuss options.</b>
                         <div className="training-ps">
@@ -42,10 +43,21 @@ const TrainingContactForm = () => {
                         </div>
                         <div className="trining-contact-wrapper">
                             <div className="training-photos">
-                                <img src={IllustrationImage} alt="" />
+                                <img
+                                    src={IllustrationImage}
+                                    alt=""
+                                />
                             </div>
                             <div className="contact-form">
-                                <ContactForm />
+                                {/* <ContactForm /> */}
+                                <iframe
+                                    src="https://docs.google.com/forms/d/e/1FAIpQLSfq_FPIUDDFJmSf0fAeaxwziD4x9BqFxy55AZMhgajXQjVG2g/viewform?embedded=true"
+                                    frameBorder="0"
+                                    marginHeight="0"
+                                    marginWidth="0"
+                                >
+                                    Loading…
+                                </iframe>
                             </div>
                         </div>
                     </div>
