@@ -41,7 +41,7 @@ const Contacts = () => {
                                 <PhoneIcon />
                             </div>
                             <div className="contact-text">
-                                <a href="tel:+14044907923">+1(404)490-7923</a>
+                                <a href="tel:+14708821289">+1(470)882-1289</a>
                             </div>
                         </div>
                         <div className="email">
