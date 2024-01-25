@@ -1,8 +1,7 @@
 import React from "react";
 import { ThemeProvider } from "contexts/ThemeContext";
 import { useTranslation } from "react-i18next";
-import ContactForm from "components/contactForm/contactForm";
-import IllustrationImage from "assets/images/Illustration4.png";
+import IllustrationImage from "../../../assets/images/Illustration4_.png";
 import "./TrainingContactForm.scss";
 
 const TrainingContactForm = () => {
