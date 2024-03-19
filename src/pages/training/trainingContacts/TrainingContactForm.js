@@ -14,7 +14,7 @@ const TrainingContactForm = () => {
                         <div className="training-label">
                             <b>NWT Training Academy</b> provides techs with the training needed to become an employable Coax Splicing Technician.
                         </div>
-                        <br /> <b>The 2-week course at our Buford GA facility is comprised of:</b>
+                        <br /> <b>The 1-week course at our Buford GA facility is comprised of:</b>
                         <br />
                         <div className="training-price-box">Price: $999</div>
                         <ul className="training-list">
@@ -23,8 +23,6 @@ const TrainingContactForm = () => {
                             <li>Day 3: High-Split Specific Training</li>
                             <li>Day 4: Hands on plus Bucket Safety Training (Jenksinsburg GA)</li>
                             <li>Day 5: Hot Splice / Balancing and troubleshooting (Competency Exam)</li>
-                            <br />
-                            <li>Week 2 - Live shadowing of our in-house crews on a actual project</li>
                         </ul>
                         <br />
                         <br />
