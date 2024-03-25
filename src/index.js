@@ -7,11 +7,9 @@ import "./i18n";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
-    <React.StrictMode>
-      <Suspense fallback={<div>Loading...</div>}>
-        <App />
-      </Suspense>
-    </React.StrictMode>
-  </BrowserRouter>
+    <BrowserRouter>
+        <Suspense fallback={<div>Loading...</div>}>
+            <App />
+        </Suspense>
+    </BrowserRouter>
 );

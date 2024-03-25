@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ThemeContext } from "contexts/ThemeContext";
+import { ThemeContext } from "contexts/Context";
 import { ReactComponent as LogoIcon } from "assets/icons/LogoFooter.svg";
 import "./footer.scss";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { ThemeProvider } from "../../contexts/ThemeContext";
+import { ContextProvider } from "../../contexts/Context";
 import Header from "components/header/Header";
 import Home from "./home/Home";
 import About from "./about/About";
@@ -10,7 +10,7 @@ import Footer from "components/footer/footer";
 
 const Main = () => {
     return (
-        <ThemeProvider>
+        <ContextProvider>
             <Header />
             <Home />
             <About />
@@ -18,7 +18,7 @@ const Main = () => {
             <Team />
             <Contacts />
             <Footer />
-        </ThemeProvider>
+        </ContextProvider>
     );
 };
 
