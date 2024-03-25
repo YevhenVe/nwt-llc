@@ -41,6 +41,13 @@ const TrainingContactForm = () => {
                                 {t(`${"contact"}`)}&nbsp;
                                 {t(`${"us"}`)}
                             </h1>
+                            <br />
+                            <h2>Training Academy Information Form</h2>
+                            <p>
+                                If you are interested in gaining new knowledge with us, fill out this form to join the academy base. Share your experience and contact details.
+                                <br /> "Please note that all the information provided by you will be used solely within New World Telecom LLC and is intended for internal use only. We strictly
+                                maintain confidentiality and do not disclose your data to any third parties for marketing purposes"
+                            </p>
                         </div>
                         <div className="trining-contact-wrapper">
                             <div className="training-photos">
@@ -51,14 +58,21 @@ const TrainingContactForm = () => {
                             </div>
                             <div className="contact-form">
                                 {/* <ContactForm /> */}
-                                <iframe
+                                {/* <iframe
                                     src="https://docs.google.com/forms/d/e/1FAIpQLSfq_FPIUDDFJmSf0fAeaxwziD4x9BqFxy55AZMhgajXQjVG2g/viewform?embedded=true"
                                     frameBorder="0"
                                     marginHeight="0"
                                     marginWidth="0"
                                 >
                                     Loading…
-                                </iframe>
+                                </iframe> */}
+                                <iframe
+                                    className="my-iframe"
+                                    src="https://forms.monday.com/forms/embed/fe366942024b89c1196e92fce9e4808f?r=use1"
+                                    frameBorder="0"
+                                    border="0"
+                                    cellSpacing="0"
+                                ></iframe>
                             </div>
                         </div>
                     </div>

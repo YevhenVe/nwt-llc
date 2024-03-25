@@ -5,6 +5,7 @@ import Main from "pages/main/Main";
 import NotFoundPage from "pages/notFoundPage/NotFoundPage";
 import EmailSent from "pages/emailSent/EmailSent";
 import Training from "pages/training/TrainingMain";
+import Partnership from "pages/partnership/PartnershipMain";
 import CustomCookieModal from "./components/customCookieModal/CustomCookieModal";
 import "./styles/Index.scss";
 
@@ -31,6 +32,10 @@ function App() {
                 <Route
                     path="/training"
                     element={<Training />}
+                />
+                <Route
+                    path="/partnership"
+                    element={<Partnership />}
                 />
             </Routes>
             <CustomCookieModal
