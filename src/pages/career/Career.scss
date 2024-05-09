@@ -1,0 +1,120 @@
+.career-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 200px 0;
+    padding: 0 25px;
+    .no-opportunities {
+        margin-bottom: 25px;
+    }
+    .career-label {
+        display: flex;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 42px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        @media screen and (max-width: 986px) {
+            font-size: 28px;
+            line-height: 36px;
+        }
+        .pre-label {
+            margin-right: 20px;
+            color: var(--accent-color);
+        }
+        .after-label {
+            color: var(--color-dark);
+        }
+    }
+    .new-career-opportunity-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 600px;
+        color: var(--color-dark);
+        .add-new-job-button {
+            margin-bottom: 45px;
+        }
+    }
+    .job-card-wrapper {
+        width: 100%;
+        max-width: 700px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 25px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        padding: 20px 30px;
+        margin-bottom: 45px;
+        overflow-x: auto;
+        color: var(--color-dark);
+        .job-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: self-start;
+            margin-bottom: 25px;
+            padding-left: 0;
+            text-align: justify;
+            .description {
+                overflow: hidden;
+                max-height: 25px;
+                transition: max-height 200ms ease;
+            }
+            .description-more {
+                max-height: 300px;
+                overflow-y: auto;
+                padding-right: 15px;
+            }
+            li {
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 10px;
+                p {
+                    margin-right: 10px;
+                    font-weight: 600;
+                }
+            }
+        }
+        .button-box {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            list-style: none;
+            padding: 0;
+            width: 100%;
+            .fill-out-form-button {
+                text-align: center;
+                justify-self: center;
+            }
+            .read-more-button {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                height: 100%;
+            }
+            .manage-buttons {
+                display: flex;
+                .delete-job-button,
+                .edit-job-button {
+                    width: 35px;
+                    height: 35px;
+                    margin-right: 15px;
+                    justify-self: center;
+                    transition: scale 200ms ease;
+                    cursor: pointer;
+                    &:hover {
+                        scale: (1.1);
+                    }
+                }
+            }
+        }
+    }
+}
+.vh100 {
+    height: 100vh;
+}

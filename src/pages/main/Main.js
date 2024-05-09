@@ -1,5 +1,4 @@
 import React from "react";
-import { ContextProvider } from "../../contexts/Context";
 import Header from "components/header/Header";
 import Home from "./home/Home";
 import About from "./about/About";
@@ -10,7 +9,7 @@ import Footer from "components/footer/footer";
 
 const Main = () => {
     return (
-        <ContextProvider>
+        <>
             <Header />
             <Home />
             <About />
@@ -18,7 +17,7 @@ const Main = () => {
             <Team />
             <Contacts />
             <Footer />
-        </ContextProvider>
+        </>
     );
 };
 

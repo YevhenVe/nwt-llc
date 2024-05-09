@@ -1,15 +1,39 @@
-import { use } from "i18next";
 import React, { useState, createContext, useEffect } from "react";
+import { auth } from "../Firebase";
+import { onAuthStateChanged } from "firebase/auth";
 
+export const AuthContext = createContext();
 export const ThemeContext = createContext();
 export const LoadedContext = createContext();
 
 export const ContextProvider = (props) => {
+    const [currentUser, setCurrentUser] = useState(null);
+    const [userLoggedIn, setUserLoggedIn] = useState(false);
     const [themeSwitch, setThemeSwitch] = useState(() => localStorage.getItem("day-night") === "true");
     const [loaded, setLoaded] = useState(false);
     const colorLight = "--color-light";
     const colorDark = "--color-dark";
     const secondColorDark = "--second-color-dark";
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, initializeUser);
+        return unsubscribe;
+    }, []);
+
+    async function initializeUser(user) {
+        if (user) {
+            setCurrentUser({ ...user });
+            setUserLoggedIn(true);
+        } else {
+            setCurrentUser(null);
+            setUserLoggedIn(false);
+        }
+    }
+
+    const value = {
+        currentUser,
+        userLoggedIn,
+    };
 
     useEffect(() => {
         localStorage.setItem("day-night", themeSwitch);
@@ -29,8 +53,10 @@ export const ContextProvider = (props) => {
     };
 
     return (
-        <LoadedContext.Provider value={{ loaded, setLoaded, handleIframeLoad }}>
-            <ThemeContext.Provider value={[themeSwitch, setThemeSwitch]}>{props.children}</ThemeContext.Provider>
-        </LoadedContext.Provider>
+        <AuthContext.Provider value={value}>
+            <LoadedContext.Provider value={{ loaded, setLoaded, handleIframeLoad }}>
+                <ThemeContext.Provider value={[themeSwitch, setThemeSwitch]}>{props.children}</ThemeContext.Provider>
+            </LoadedContext.Provider>
+        </AuthContext.Provider>
     );
 };

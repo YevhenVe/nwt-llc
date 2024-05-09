@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import { LoadedContext } from "contexts/Context";
 import CustomButton from "components/customButton/CustomButton";
 import { ReactComponent as LoaderAnimation } from "assets/icons/Loader.svg";
@@ -13,6 +14,7 @@ const Home = () => {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+    const navigate = useNavigate();
 
     const { t } = useTranslation();
 
@@ -33,8 +35,8 @@ const Home = () => {
                     where you are.
                 </div>
                 <CustomButton
-                    label="get hiring"
-                    onClick={handleOpen}
+                    label="Career Opportunities"
+                    onClick={() => navigate("/career")}
                 />
                 <Link
                     className="link"

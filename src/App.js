@@ -7,11 +7,13 @@ import EmailSent from "pages/emailSent/EmailSent";
 import Training from "pages/training/TrainingMain";
 import Partnership from "pages/partnership/PartnershipMain";
 import CustomCookieModal from "./components/customCookieModal/CustomCookieModal";
+import Aadminlogin from "pages/adminlogin/Aadminlogin";
+import Career from "pages/career/Career";
 import "./styles/Index.scss";
 
 function App() {
     const [cookieModalIsOpen, setCookieModalIsOpen] = useState(false);
-
+    console.log(process.env.REACT_APP_NAME);
     return (
         <>
             <Routes>
@@ -37,6 +39,14 @@ function App() {
                     path="/partnership"
                     element={<Partnership />}
                 />
+                <Route
+                    path="/adminlogin"
+                    element={<Aadminlogin />}
+                />
+                <Route
+                    path="/career"
+                    element={<Career />}
+                />
             </Routes>
             <CustomCookieModal
                 isOpen={cookieModalIsOpen}
@@ -44,7 +54,7 @@ function App() {
             />
             <CookieBanner
                 onAccept={() => {
-                    setCookieModalIsOpen(true); // Открываем модальное окно при согласии
+                    setCookieModalIsOpen(true);
                 }}
                 cookie="user-has-accepted-cookies"
             />

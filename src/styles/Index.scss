@@ -85,3 +85,7 @@ code {
         fill: var(--color-dark);
     }
 }
+
+.MuiInputBase-root {
+    color: var(--color-dark) !important;
+}
