@@ -13,7 +13,6 @@ import "./styles/Index.scss";
 
 function App() {
     const [cookieModalIsOpen, setCookieModalIsOpen] = useState(false);
-    console.log(process.env.REACT_APP_NAME);
     return (
         <>
             <Routes>

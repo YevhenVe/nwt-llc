@@ -25,15 +25,7 @@ const Home = () => {
         >
             <div className="home-content-wrapper">
                 <div className="pre-title">{t("COMMUNICATIONS SOLUTIONS")}</div>
-                <div className="company-neme">
-                    New World
-                    <br />
-                    Telecom
-                </div>
-                <div className="slogan">
-                    Do what you can, with what you have, <br />
-                    where you are.
-                </div>
+                <div className="slogan">Plan, Execute, Deliver! </div>
                 <CustomButton
                     label="Career Opportunities"
                     onClick={() => navigate("/career")}

@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "image": "https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGNvbnN0cnVjdGlvbiUyMHRlbGVjb218ZW58MHx8MHx8fDA%3D",
+    "title": "New  Site Builds",
+    "items": {
+      "item1": "value1",
+      "item2": "value2",
+      "item3": "value3",
+      "item4": "value4",
+      "item5": "value5"
+    }
+  },
+  {
+    "id": 2,
+    "image": "https://images.unsplash.com/photo-1683741991313-d0eb7e79adc9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fHVwZ3JhZGV8ZW58MHx8MHx8fDA%3D",
+    "title": "Upgrades & Modifications",
+    "items": {
+      "item1": "value1",
+      "item2": "value2",
+      "item3": "value3",
+      "item4": "value4",
+      "item5": "value5"
+    }
+  },
+  {
+    "id": 3,
+    "image": "https://images.unsplash.com/photo-1596754777925-043dc3084b35?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29uc3RydWN0aW9uJTIwdGVsZWNvbXxlbnwwfHwwfHx8MA%3D%3D",
+    "title": "Decommissioning",
+    "items": {
+      "item1": "wfdwe",
+      "item2": "value2",
+      "item3": "value3",
+      "item4": "wercqwe",
+      "item5": "value5"
+    }
+  },
+  {
+    "id": 4,
+    "image": "https://images.unsplash.com/photo-1689337091593-2992b537f02c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8R3JvdW5kd29ya3xlbnwwfHwwfHx8MA%3D%3D",
+    "title": "Civil & Groundwork",
+    "items": {
+      "item1": "valyukgmyumkue1 asf aqwxrq xaxqewrx qwexr",
+      "item2": "value2",
+      "item3": "value3",
+      "item4": "value4",
+      "item5": "value5"
+    }
+  },
+  {
+    "id": 5,
+    "image": "https://dam-assets.fluke.com/s3fs-public/F-64%20max_17a_c.jpg",
+    "title": "Maintenance (Troubleshooting)",
+    "items": {
+      "item1": "value1",
+      "item2": "value2",
+      "item3": "value3",
+      "item4": "value4",
+      "item5": "value5"
+    }
+  },
+  {
+    "id": 6,
+    "image": "https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.mlive.com/home/mlive-media/width2048/img/chronicle/news_impact/photo/m0714cellmoney1-29657f12e94215e6.jpg",
+    "title": "Special Projects (Rooftops, Water Towers, Welding)",
+    "items": {
+      "item1": "value1",
+      "item2": "value2",
+      "item3": "value3",
+      "item4": "value4",
+      "item5": "value5"
+    }
+  },
+  {
+    "id": 7,
+    "image": "https://api.ctia.org/wp-content/uploads/2018/03/SmallCell_Install_Test2.jpg?4362984378",
+    "title": "Small Cell & DAS",
+    "items": {
+      "item1": "value1",
+      "item2": "value2",
+      "item3": "value3",
+      "item4": "value4",
+      "item5": "value5"
+    }
+  },
+  {
+    "id": 8,
+    "image": "https://www.itekfed.com/assets/images/services-800x553-emergency-restoration-01.jpg",
+    "title": "Emergency Restoration Services",
+    "items": {
+      "item1": "value1",
+      "item2": "value2",
+      "item3": "value3",
+      "item4": "value4",
+      "item5": "value5"
+    }
+  }
+]

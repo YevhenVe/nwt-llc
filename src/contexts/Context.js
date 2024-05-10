@@ -38,13 +38,13 @@ export const ContextProvider = (props) => {
     useEffect(() => {
         localStorage.setItem("day-night", themeSwitch);
         if (themeSwitch) {
-            document.documentElement.style.setProperty(colorLight, "rgba(45, 45, 45, 1)");
+            document.documentElement.style.setProperty(colorLight, "rgba(45, 70, 78, 1)");
             document.documentElement.style.setProperty(colorDark, "rgba(255, 255, 255, 1)");
             document.documentElement.style.setProperty(secondColorDark, "rgba(46, 70, 78, 1)");
         } else {
-            document.documentElement.style.setProperty(colorLight, "rgba(248, 249, 249, 1)");
-            document.documentElement.style.setProperty(colorDark, "rgba(45, 45, 45, 1)");
-            document.documentElement.style.setProperty(secondColorDark, "rgba(248, 249, 249, 1)");
+            document.documentElement.style.setProperty(colorLight, "rgba(255, 255, 255, 1)");
+            document.documentElement.style.setProperty(colorDark, "rgba(45, 70, 78, 1)");
+            document.documentElement.style.setProperty(secondColorDark, "rgba(255, 255, 255, 1)");
         }
     }, [themeSwitch]);
 

@@ -1,88 +1,74 @@
 @use "styles/Variables.scss";
 
 .about-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: var(--second-color-dark);
-  padding-top: 120px;
-  .about-label {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-bottom: 45px;
-    font-weight: 700;
-    font-size: 42px;
-    text-transform: uppercase;
-    @media screen and (max-width: 960px) {
-      font-size: 32px;
-    }
-    .pre-label {
-      margin-right: 20px;
-      color: var(--color-dark);
-    }
-    .after-label {
-      color: var(--accent-color);
-    }
-  }
-  .about-content {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    background-color: var(--main-color);
-    box-shadow: var(--header-shadow);
-    .about-content-width {
-      display: flex;
-      justify-content: space-between;
-      width: var(--desktop-max-width);
-      padding: 70px 0;
-      @media screen and (max-width: 1290px) {
-        width: 960px;
-      }
-      @media screen and (max-width: 986px) {
-        width: 660px;
-        flex-wrap: wrap;
-        justify-content: end;
-      }
-      .about-text-wrapper {
-        color: var(--color-light);
-        margin-right: 150px;
-        @media screen and (max-width: 986px) {
-          margin-right: 0;
-          margin-bottom: 40px;
-          padding: 0 10px 0 10px;
-        }
-        .title-text {
-          font-weight: 500;
-          font-size: 42px;
-          line-height: 46px;
-          margin-bottom: 30px;
-          @media screen and (max-width: 986px) {
+    background-color: var(--second-color-dark);
+    padding-top: 120px;
+    .about-label {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 45px;
+        font-weight: 700;
+        font-size: 42px;
+        text-transform: uppercase;
+        @media screen and (max-width: 960px) {
             font-size: 32px;
-            line-height: 36px;
-          }
         }
-        .main-tetx {
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 30px;
+        .pre-label {
+            margin-right: 20px;
+            color: var(--color-dark);
         }
-      }
-      .about-image {
-        background-image: url("../../../assets/images/Illustration2.jpg");
-        background-size: cover;
-        min-width: 560px;
-        height: 390px;
-        border: 2px solid #ffffff;
-        filter: drop-shadow(0px 246px 99px rgba(21, 28, 30, 0.01)) drop-shadow(0px 139px 83px rgba(21, 28, 30, 0.05))
-          drop-shadow(0px 62px 62px rgba(21, 28, 30, 0.09)) drop-shadow(0px 15px 34px rgba(21, 28, 30, 0.1))
-          drop-shadow(0px 0px 0px rgba(21, 28, 30, 0.1));
-        border-radius: 5px;
-        @media screen and (max-width: 1290px) {
-          min-width: 20rem;
-          height: 15rem;
-          margin-right: 10px;
+        .after-label {
+            color: var(--accent-color);
         }
-      }
     }
-  }
+    .about-content {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background-color: var(--color-light);
+        box-shadow: var(--main-shadow);
+        z-index: 1;
+        .about-content-width {
+            display: flex;
+            flex-direction: column;
+            width: var(--desktop-max-width);
+            padding: 70px 0;
+            @media screen and (max-width: 1290px) {
+                width: 960px;
+            }
+            @media screen and (max-width: 986px) {
+                width: 660px;
+                flex-wrap: wrap;
+                justify-content: end;
+            }
+            .about-text-wrapper {
+                color: var(--color-dark);
+                text-align: center;
+                margin-bottom: 100px;
+                @media screen and (max-width: 986px) {
+                    margin-bottom: 40px;
+                    padding: 0 10px 0 10px;
+                }
+                .title-text {
+                    font-weight: 500;
+                    font-size: 42px;
+                    font-weight: 700;
+                    line-height: 46px;
+                    margin-bottom: 30px;
+                    @media screen and (max-width: 986px) {
+                        font-size: 32px;
+                        line-height: 36px;
+                    }
+                }
+                .main-tetx {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
 }
