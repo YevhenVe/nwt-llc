@@ -1,20 +1,20 @@
 import React from "react";
-import imagesData from "./Clients.json";
+import imagesData from "./Partners.json";
 import { useTranslation } from "react-i18next";
 import Slider from "components/slider/Slider";
-import "./Clients.scss";
+import "./Partners.scss";
 
-const Clients = ({ imageArray }) => {
+const Parners = ({ imageArray }) => {
     imageArray = imagesData;
     const { t } = useTranslation();
 
     return (
         <Slider imageArray={imageArray}>
             <div className="clients-label">
-                <div className="pre-label">{t("our")}</div>
-                <div className="after-label">{t("clients")}</div>
+                <div className="pre-label">{t("trusted")}</div>
+                <div className="after-label">{t("partners")}</div>
             </div>
         </Slider>
     );
 };
-export default Clients;
+export default Parners;

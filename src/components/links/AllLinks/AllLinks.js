@@ -51,7 +51,7 @@ const AllLinks = ({ children }) => {
                     >
                         <CustomButtonHeader label="about us" />
                     </Link>
-                    <Link
+                    {/* <Link
                         className="link"
                         activeClass="active"
                         to="info"
@@ -61,8 +61,8 @@ const AllLinks = ({ children }) => {
                         duration={300}
                     >
                         <CustomButtonHeader label="info" />
-                    </Link>
-                    <Link
+                    </Link> */}
+                    {/* <Link
                         className="link"
                         activeClass="active"
                         to="team"
@@ -72,7 +72,7 @@ const AllLinks = ({ children }) => {
                         duration={300}
                     >
                         <CustomButtonHeader label="team" />
-                    </Link>
+                    </Link> */}
                     <Link
                         className="link"
                         activeClass="active"
