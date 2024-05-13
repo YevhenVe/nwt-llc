@@ -20,10 +20,8 @@ const Footer = () => {
                         <a
                             href="https://eugeneve.github.io/"
                             target="blank"
-                            title="Web Developer Website"
-                        >
-                            YV Design
-                        </a>
+                            title="Web Developer Yevhen Veprytskyi"
+                        ></a>
                     </div>
                 </div>
             </div>
