@@ -10,37 +10,24 @@ const SeparLinks = () => {
     const navigate = useNavigate();
     return (
         <AllLinks>
-            {location.pathname !== "/training" ? (
-                <div
-                    className="link"
-                    onClick={() => navigate("/training")}
-                >
-                    <CustomButtonHeader label="training" />
-                </div>
-            ) : (
-                <div
-                    className="link active"
-                    onClick={() => navigate("/training")}
-                >
-                    <CustomButtonHeader label="training" />
-                </div>
-            )}
-
-            {location.pathname !== "/partnership" ? (
-                <div
-                    className="link"
-                    onClick={() => navigate("/partnership")}
-                >
-                    <CustomButtonHeader label="partnership" />
-                </div>
-            ) : (
-                <div
-                    className="link active"
-                    onClick={() => navigate("/partnership")}
-                >
-                    <CustomButtonHeader label="partnership" />
-                </div>
-            )}
+            <div
+                className={`link ${location.pathname !== "/training" ? "" : "active"} `}
+                onClick={() => navigate("/training")}
+            >
+                <CustomButtonHeader label="training" />
+            </div>
+            <div
+                className={`link ${location.pathname !== "/partnership" ? "" : "active"} `}
+                onClick={() => navigate("/partnership")}
+            >
+                <CustomButtonHeader label="partnership" />
+            </div>
+            {/* <div
+                className={`link ${location.pathname !== "/adminlogin" ? "" : "active"} `}
+                onClick={() => navigate("/adminlogin")}
+            >
+                <CustomButtonHeader label="login" />
+            </div> */}
         </AllLinks>
     );
 };
