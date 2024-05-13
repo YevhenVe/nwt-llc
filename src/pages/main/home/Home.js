@@ -23,6 +23,16 @@ const Home = () => {
             className="wrapper-home"
             name="home"
         >
+            <video
+                autoPlay
+                muted
+                loop
+            >
+                <source
+                    src="https://nwt-llc.com/static/media/herovideo.mp4"
+                    type="video/mp4"
+                />
+            </video>
             <div className="home-content-wrapper">
                 <div className="pre-title">{t("COMMUNICATIONS SOLUTIONS")}</div>
                 <div className="slogan">Plan, Execute, Deliver! </div>
@@ -44,7 +54,6 @@ const Home = () => {
                     </div>
                 </Link>
             </div>
-
             <Modal
                 open={open}
                 onClose={handleClose}
