@@ -10,7 +10,7 @@ const Clients = ({ imageArray }) => {
 
     return (
         <Slider imageArray={imageArray}>
-            <div className="clients-label">
+            <div className="label">
                 <div className="pre-label">{t("our")}</div>
                 <div className="after-label">{t("clients")}</div>
             </div>
