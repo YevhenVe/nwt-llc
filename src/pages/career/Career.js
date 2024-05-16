@@ -88,6 +88,8 @@ const Career = () => {
         setReadMore((prevReadMore) => ({ ...prevReadMore, [id]: !prevReadMore[id] }));
     };
 
+    const disabled = !position || !description || !salary || !location || !formLink;
+
     return (
         <>
             <Header />
@@ -128,6 +130,13 @@ const Career = () => {
                             onChange={(e) => setSalary(e.target.value)}
                             placeholder="Salary"
                             sx={{ marginBottom: 2, input: { color: "var(--color-dark)" } }}
+                            inputProps={{
+                                onKeyPress: (e) => {
+                                    if (!/[0-9.,]/.test(e.key) && e.key !== "Backspace") {
+                                        e.preventDefault();
+                                    }
+                                },
+                            }}
                         />
                         <Select
                             size="small"
@@ -157,6 +166,8 @@ const Career = () => {
                         <CustomButton
                             label={isEditing ? "Update Job" : "Add new job"}
                             onClick={onSubmit}
+                            disabled={disabled}
+                            title={disabled ? "Please fill in all fields" : ""}
                             className="add-new-job-button"
                         />
                     </div>

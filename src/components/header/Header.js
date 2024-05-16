@@ -1,8 +1,8 @@
 import React, { useRef, useContext } from "react";
 import { ThemeContext } from "contexts/Context";
-import Links from "../links/Links";
 import { ReactComponent as LogoLightTheme } from "assets/icons/LogoLightTheme.svg";
 import { ReactComponent as LogoDarkTheme } from "assets/icons/LogoDarkTheme.svg";
+import Links from "../links/Links";
 import "./Header.scss";
 
 const Header = () => {

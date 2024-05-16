@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { AuthContext } from "contexts/Context";
 import AllLinks from "./AllLinks/AllLinks";
 import CustomButtonHeader from "components/customButtonHeader/CustomButtonHeader";
 import { useLocation } from "react-router-dom";
@@ -6,8 +7,23 @@ import { useNavigate } from "react-router-dom";
 import "./Links.scss";
 
 const SeparLinks = () => {
+    const { currentUser } = useContext(AuthContext);
     const [location, setLocation] = useState(useLocation());
     const navigate = useNavigate();
+    // Generate a random hexadecimal color code
+    const getRandomColor = () => {
+        let color = localStorage.getItem("randomColor");
+        if (!color) {
+            const letters = "0123456789ABCDEF";
+            color = "#";
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            localStorage.setItem("randomColor", color);
+        }
+        return color;
+    };
+
     return (
         <AllLinks>
             <div
@@ -22,6 +38,14 @@ const SeparLinks = () => {
             >
                 <CustomButtonHeader label="partnership" />
             </div>
+            {currentUser && (
+                <div
+                    className="avatar"
+                    onClick={() => navigate("/adminlogin")}
+                >
+                    <p style={{ color: getRandomColor() }}>{currentUser?.email[0].toUpperCase()}</p>
+                </div>
+            )}
             {/* <div
                 className={`link ${location.pathname !== "/adminlogin" ? "" : "active"} `}
                 onClick={() => navigate("/adminlogin")}

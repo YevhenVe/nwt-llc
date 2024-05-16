@@ -38,6 +38,13 @@
         color: var(--color-dark);
         .add-new-job-button {
             margin-bottom: 45px;
+            &:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+                &:hover {
+                    scale: 1;
+                }
+            }
         }
     }
     .job-card-wrapper {
