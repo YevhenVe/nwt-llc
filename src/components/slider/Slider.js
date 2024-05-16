@@ -1,5 +1,5 @@
 import React from "react";
-import Marquee from "react-marquee-slider";
+import Marquee from "react-fast-marquee";
 import "./Slider.scss";
 
 const Slider = ({ imageArray, children }) => {
@@ -9,7 +9,10 @@ const Slider = ({ imageArray, children }) => {
             <div className="slider">
                 <div className="gradient-left" />
                 <div className="gradient-right" />
-                <Marquee velocity={25}>
+                <Marquee
+                    pauseOnHover={true}
+                    speed={20}
+                >
                     {imageArray.map((imageArray, index) => (
                         <div
                             className="image-box"

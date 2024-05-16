@@ -18,7 +18,7 @@ const Career = () => {
     const [salary, setSalary] = useState("");
     const [description, setDescription] = useState("");
     const [location, setLocation] = useState("");
-    const [formLink, setFormLink] = useState("");
+    const [formLink, setFormLink] = useState("https://forms.monday.com/forms/bbdd7fc4aa001011c39ed6e9b9ce7391?r=use1");
     const [storedJobs, setStoredJobs] = useState([]);
     const [readMore, setReadMore] = useState("");
     const [editingJob, setEditingJob] = useState(null);
@@ -50,10 +50,7 @@ const Career = () => {
             console.log("Document written with ID: ", docRef.id);
         }
     };
-    // Handling the change in the location
-    const handleChange = (e) => {
-        setLocation(e.target.value);
-    };
+
     // Fetching the jobs from the database
     useEffect(() => {
         const jobsRef = collection(db, "jobs");
@@ -63,15 +60,13 @@ const Career = () => {
         });
         return unsubscribe; // Clean up the listener when the component unmounts
     }, []);
+
     // Deleting jobs from the database
     const deleteJob = async (id) => {
         await deleteDoc(doc(db, "jobs", id));
         setStoredJobs(storedJobs.filter((job) => job.id !== id));
     };
-    // Handling the read more button
-    const handleReadMore = (id) => {
-        setReadMore((prevReadMore) => ({ ...prevReadMore, [id]: !prevReadMore[id] }));
-    };
+
     // Handling the edit button
     const startEditingJob = (job) => {
         setEditingJob(job);
@@ -81,6 +76,16 @@ const Career = () => {
         setLocation(job.location);
         setFormLink(job.formLink);
         setIsEditing(true);
+    };
+
+    // Handling the change in the location
+    const handleChange = (e) => {
+        setLocation(e.target.value);
+    };
+
+    // Handling the read more button
+    const handleReadMore = (id) => {
+        setReadMore((prevReadMore) => ({ ...prevReadMore, [id]: !prevReadMore[id] }));
     };
 
     return (
