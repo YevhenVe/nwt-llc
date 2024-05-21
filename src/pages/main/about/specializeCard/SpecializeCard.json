@@ -6,12 +6,10 @@
     "items": {
       "item1": "New Tower Builds & Colocations",
       "item2": "Civil & Electrical Construction",
-      "item3": "Structural Modifications",
-      "item4": "Repair & Maintenance",
-      "item5": "Zoning and Permitting",
-      "item6": "Foundation design",
-      "item7": "Structural Analysis",
-      "item8": "Material Logistics"
+      "item3": "Zoning and Permitting",
+      "item4": "Foundation design",
+      "item5": "Structural Analysis",
+      "item6": "Material Logistics"
     }
   },
   {
@@ -19,64 +17,62 @@
     "image": "https://www.itekfed.com/assets/images/services-800x553-emergency-restoration-01.jpg",
     "title": "Upgrades & Modifications",
     "items": {
-      "item1": "Structural Modifications",
-      "item2": "Civil Construction",
-      "item3": "Radio + Antenna Swap",
+      "item1": "Antenna & Line Installation",
+      "item2": "Structural Modifications",
+      "item3": "Civil Construction",
+      "item4": "Decommissioning",
       "item5": "Closeout and Compliance",
-      "item6": "End-to-End Project Management",
-      "item7": "Antenna & Line Installation",
-      "item8": "Decommissioning"
+      "item6": "End-to-End Project Management"
+    }
+  },
+  {
+    "id": 3,
+    "image": "https://dam-assets.fluke.com/s3fs-public/F-64%20max_17a_c.jpg",
+    "title": "Maintenance (Troubleshooting)",
+    "items": {
+      "item1": "Assist with system testing (Equipment Diagnosis)",
+      "item2": "Install and repair tower-top equipment / bracing, masts, cable, RRUS, and antennas",
+      "item3": "Complete job logs and field reports",
+      "item4": "Troubleshooting / PIM/Hygiene correction",  
+      "item5": "Continue support and warranty"
+    }
+  },
+  {
+    "id": 4,
+    "image": "https://nwt-llc.com/static/media/SpecialProject2.jpeg",
+    "title": "Special Projects",
+    "items": {
+      "item1": "Rooftops, Water Towers, etc.",
+      "item2": "Schematics and Design Consulting",
+      "item3": "Special Permitting (afterhours, trafick control, boom-lift, crane)",
+      "item4": "Custom materials & fabrication (Welding Steel Plate)",
+      "item5": "Structural Analysis & Engeneering",
+      "item6": "Jurisdicational inspection & Closing"
     }
   },
   {
     "id": 5,
-    "image": "https://dam-assets.fluke.com/s3fs-public/F-64%20max_17a_c.jpg",
-    "title": "Maintenance (Troubleshooting)",
+    "image": "https://api.ctia.org/wp-content/uploads/2018/03/SmallCell_Install_Test2.jpg?4362984378",
+    "title": "5G Small cell / C-RAN Construction",
     "items": {
-      "item1": "Quick Response teams (Tiger)",
-      "item2": "PIM/Hygiene correction",
-      "item3": "Equipment Diagnosis",
-      "item4": "Install, upgrade, and repair cables and connectors",
-      "item5": "Install, upgrade, and repair tower-top equipment, including bracing, masts, cable supports, RRUS, and antennas",
-      "item6": "Assist with system testing",
-      "item7": "Ensure safe rigging, hoisting, landing, and fastening",
-      "item8": "Complete job logs and field reports",
-      "item9": "Diagnosis tool inventory tracking"
+      "item1": "Site Feasibility and A&E Design",
+      "item2": "New Pole Installation & Colocation",
+      "item3": "Equipment Installation and Integration & closeout",
+      "item4": "System Performance & Evaluation",
+      "item5": "Install and maintain small-cell systems, including all required electrical and fiber work",
+      "item6": "Full scale Compliance / Permitting"
     }
   },
   {
     "id": 6,
-    "image": "https://nwt-llc.com/static/media/SpecialProject2.jpeg",
-    "title": "Special Projects (Rooftops, Water Towers, Welding)",
-    "items": {
-      "item1": "Schematics and Design Consulting",
-      "item2": "Special Permitting (afterhours, road closure, crane)",
-      "item3": "Multi-Trade projects (Welders, Pipefitters)",
-      "item4": "Structural Analysis",
-      "item5": "Class IV Rigging Plans "
-    }
-  },
-  {
-    "id": 7,
-    "image": "https://api.ctia.org/wp-content/uploads/2018/03/SmallCell_Install_Test2.jpg?4362984378",
-    "title": "5G Small cell / C-RAN Construction",
-    "items": {
-      "item1": "Site Architecture and Design",
-      "item2": "Site Feasibility and A&E Design",
-      "item3": "New Pole Installation & Colocation",
-      "item4": "Equipment Installation and Integration & closeout",
-      "item5": "System Performance & Evaluation",
-      "item6": "Install and maintain small-cell systems, including all required electrical and fiber work"
-    }
-  },
-  {
-    "id": 8,
     "image": "https://nwt-llc.com/static/media/EmergencyRestoration.png",
     "title": "Emergency Restoration Services",
     "items": {
       "item1": "Critical Power",
       "item2": "Generator deployment and maintenance",
-      "item3": "Repair & Response"
+      "item3": "Emergency Response services retoration",
+      "item4": "Severe Weather and flooding preparedness",
+      "item5": "Maintenance & Monitoring"
     }
   }
 ]

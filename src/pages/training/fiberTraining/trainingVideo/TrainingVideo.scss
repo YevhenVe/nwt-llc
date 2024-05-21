@@ -1,0 +1,11 @@
+.training-video-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 120px 0;
+    iframe {
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0px 15px 25px 1px rgba(0, 0, 0, 0.2);
+    }
+}
