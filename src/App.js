@@ -9,6 +9,8 @@ import Partnership from "pages/partnership/PartnershipMain";
 import CustomCookieModal from "./components/customCookieModal/CustomCookieModal";
 import Aadminlogin from "pages/adminlogin/Aadminlogin";
 import Career from "pages/career/Career";
+import FiberTraining from "pages/training/fiberTraining/FiberTraining";
+import TowerTraining from "pages/training/towerTraining/TowerTraining";
 import "./styles/Index.scss";
 
 function App() {
@@ -45,6 +47,14 @@ function App() {
                 <Route
                     path="/career"
                     element={<Career />}
+                />
+                <Route
+                    path="/fiber-training"
+                    element={<FiberTraining />}
+                />
+                <Route
+                    path="/tower-training"
+                    element={<TowerTraining />}
                 />
             </Routes>
             <CustomCookieModal

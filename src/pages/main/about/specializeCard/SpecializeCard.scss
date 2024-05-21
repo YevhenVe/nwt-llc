@@ -49,12 +49,15 @@
             }
         }
         .specialize-card-bottom {
+            overflow-y: auto;
+            height: 310px;
             padding: 30px;
             ul {
-                list-style: none;
-                padding: 0;
+                // list-style: none;
+                padding: 0 10px;
                 li {
                     margin-bottom: 10px;
+                    font-size: 14px;
                 }
             }
         }

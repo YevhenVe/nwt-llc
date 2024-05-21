@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { useTranslation } from "react-i18next";
 import { LoadedContext } from "contexts/Context";
 import { ReactComponent as LoaderAnimation } from "assets/icons/Loader.svg";
-import IllustrationImage from "../../../assets/images/Illustration4_.png";
+import IllustrationImage from "assets/images/Illustration4_.png";
 import "./TrainingContactForm.scss";
 
 const TrainingContactForm = () => {
