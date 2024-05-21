@@ -1,3 +1,14 @@
+.training-main-title-content-list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 20px 0;
+    ul {
+        text-align: left;
+        margin-left: 40px;
+    }
+}
 .training-img-wrapper {
     display: flex;
     justify-content: center;

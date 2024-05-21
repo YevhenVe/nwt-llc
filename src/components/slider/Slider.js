@@ -11,7 +11,7 @@ const Slider = ({ imageArray, children }) => {
                 <div className="gradient-right" />
                 <Marquee
                     pauseOnHover={true}
-                    speed={20}
+                    speed={30}
                 >
                     {imageArray.map((imageArray, index) => (
                         <div

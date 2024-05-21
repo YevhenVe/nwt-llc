@@ -38,20 +38,21 @@ const SeparLinks = () => {
             >
                 <CustomButtonHeader label="partnership" />
             </div>
-            {currentUser && (
+            {currentUser ? (
                 <div
                     className="avatar"
                     onClick={() => navigate("/adminlogin")}
                 >
                     <p style={{ color: getRandomColor() }}>{currentUser?.email[0].toUpperCase()}</p>
                 </div>
+            ) : (
+                <div
+                    className={`link ${location.pathname !== "/adminlogin" ? "" : "active"} `}
+                    onClick={() => navigate("/adminlogin")}
+                >
+                    <CustomButtonHeader label="login" />
+                </div>
             )}
-            {/* <div
-                className={`link ${location.pathname !== "/adminlogin" ? "" : "active"} `}
-                onClick={() => navigate("/adminlogin")}
-            >
-                <CustomButtonHeader label="login" />
-            </div> */}
         </AllLinks>
     );
 };
