@@ -46,12 +46,14 @@ const SeparLinks = () => {
                     <p style={{ color: getRandomColor() }}>{currentUser?.email[0].toUpperCase()}</p>
                 </div>
             ) : (
-                <div
+                <>
+                    {/* <div
                     className={`link ${location.pathname !== "/adminlogin" ? "" : "active"} `}
                     onClick={() => navigate("/adminlogin")}
                 >
                     <CustomButtonHeader label="login" />
-                </div>
+                </div> */}
+                </>
             )}
         </AllLinks>
     );
