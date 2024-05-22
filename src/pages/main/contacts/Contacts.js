@@ -41,7 +41,7 @@ const Contacts = () => {
                                 <PhoneIcon />
                             </div>
                             <div className="contact-text">
-                                <a href="tel:+14708821289">+1(470)882-1289</a>
+                                <a href="tel:+14709252098">+1(470)925-2098</a>
                             </div>
                         </div>
                         <div className="email">
@@ -49,7 +49,7 @@ const Contacts = () => {
                                 <EmailIcon />
                             </div>
                             <div className="contact-text">
-                                <a href="mailto:office@nwt-llc.com">office@nwt-llc.com</a>
+                                <a href="mailto:info@nwt-llc.com">info@nwt-llc.com</a>
                             </div>
                         </div>
                         <div className="work-time">
