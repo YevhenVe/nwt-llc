@@ -7,7 +7,7 @@
       "item1": "New Tower Builds & Colocations",
       "item2": "Civil & Electrical Construction",
       "item3": "Zoning and Permitting",
-      "item4": "Foundation design",
+      "item4": "Foundation Design",
       "item5": "Structural Analysis",
       "item6": "Material Logistics"
     }
@@ -30,11 +30,11 @@
     "image": "https://dam-assets.fluke.com/s3fs-public/F-64%20max_17a_c.jpg",
     "title": "Maintenance (Troubleshooting)",
     "items": {
-      "item1": "Assist with system testing (Equipment Diagnosis)",
-      "item2": "Install and repair tower-top equipment / bracing, masts, cable, RRUS, and antennas",
-      "item3": "Complete job logs and field reports",
-      "item4": "Troubleshooting / PIM/Hygiene correction",  
-      "item5": "Continue support and warranty"
+      "item1": "Assist with System Testing (Equipment Diagnosis)",
+      "item2": "Install and Repair Tower-Top Equipment / Bracing, Masts, Cable, RRUS, and Antennas",
+      "item3": "Complete Job Logs and Field Reports",
+      "item4": "Troubleshooting / PIM/Hygiene Correction",
+      "item5": "Continued Support and Warranty"
     }
   },
   {
@@ -44,23 +44,23 @@
     "items": {
       "item1": "Rooftops, Water Towers, etc.",
       "item2": "Schematics and Design Consulting",
-      "item3": "Special Permitting (afterhours, trafick control, boom-lift, crane)",
-      "item4": "Custom materials & fabrication (Welding Steel Plate)",
-      "item5": "Structural Analysis & Engeneering",
-      "item6": "Jurisdicational inspection & Closing"
+      "item3": "Special Permitting (Afterhours, Traffic Control, Boom-Lift, Crane)",
+      "item4": "Custom Materials & Fabrication (Welding / Steel Plate)",
+      "item5": "Structural Analysis & Engineering",
+      "item6": "Jurisdictional Inspection & Closing"
     }
   },
   {
     "id": 5,
     "image": "https://api.ctia.org/wp-content/uploads/2018/03/SmallCell_Install_Test2.jpg?4362984378",
-    "title": "5G Small cell / C-RAN Construction",
+    "title": "5G Small Cell / C-RAN Construction",
     "items": {
       "item1": "Site Feasibility and A&E Design",
       "item2": "New Pole Installation & Colocation",
-      "item3": "Equipment Installation and Integration & closeout",
+      "item3": "Equipment Installation and Integration & Closeout",
       "item4": "System Performance & Evaluation",
-      "item5": "Install and maintain small-cell systems, including all required electrical and fiber work",
-      "item6": "Full scale Compliance / Permitting"
+      "item5": "Install and Maintain Small-Cell Systems, Including All Required Electrical and Fiber Work",
+      "item6": "Full Scale Compliance / Permitting"
     }
   },
   {
@@ -69,9 +69,9 @@
     "title": "Emergency Restoration Services",
     "items": {
       "item1": "Critical Power",
-      "item2": "Generator deployment and maintenance",
-      "item3": "Emergency Response services retoration",
-      "item4": "Severe Weather and flooding preparedness",
+      "item2": "Generator Deployment and Maintenance",
+      "item3": "Emergency Response Services Restoration",
+      "item4": "Severe Weather and Flooding Preparedness",
       "item5": "Maintenance & Monitoring"
     }
   }
