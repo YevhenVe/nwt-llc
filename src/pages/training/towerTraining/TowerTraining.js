@@ -23,9 +23,8 @@ const TowerTraining = () => {
                                 <li>Authorized Rigging ANSI 10.48</li>
                             </ul>
                         </div>
-                        We also provide an efficient way to get any other necessary certs to keep you compliant. <br />
-                        Our program gets you the knowledge and insight to get <b>NWSA TTT-1</b> passed. We have our own training tower, and are equipped to get you up to date on all the latest
-                        techniques and technologies.
+                        We have our own training facility and provide practical and theoretical industry training. <br />
+                        Our approach helps get you up-to-date on all the latest techniques and technologies.
                     </div>
                 </div>
                 <div className="training-img-wrapper">
