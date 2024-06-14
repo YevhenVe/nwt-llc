@@ -6,7 +6,7 @@ import Locations from "./Locations.json";
 import { db } from "../../Firebase";
 import { AuthContext } from "contexts/Context";
 import { useTranslation } from "react-i18next";
-import { MenuItem, Select, TextField } from "@mui/material";
+import { MenuItem, Select, TextField, Checkbox, FormControlLabel } from "@mui/material";
 import { ReactComponent as RemoveIcon } from "assets/icons/Remove.svg";
 import { ReactComponent as EditIcon } from "assets/icons/Edit.svg";
 import { collection, addDoc, deleteDoc, doc, onSnapshot, updateDoc } from "firebase/firestore";
@@ -18,11 +18,12 @@ const Career = () => {
     const [salary, setSalary] = useState("");
     const [description, setDescription] = useState("");
     const [location, setLocation] = useState("");
-    const [formLink, setFormLink] = useState("https://forms.monday.com/forms/bbdd7fc4aa001011c39ed6e9b9ce7391?r=use1");
+    const [formLink, setFormLink] = useState("https://forms.monday.com/forms/841dbe78d20737008c792d3f09157e85?r=use1");
     const [storedJobs, setStoredJobs] = useState([]);
-    const [readMore, setReadMore] = useState("");
+    const [readMore, setReadMore] = useState({});
     const [editingJob, setEditingJob] = useState(null);
     const [isEditing, setIsEditing] = useState(false);
+    const [isSalaryVisible, setIsSalaryVisible] = useState(false);
     const { t } = useTranslation();
 
     // Adding new jobs to the database
@@ -32,23 +33,28 @@ const Career = () => {
             await updateDoc(doc(db, "jobs", editingJob.id), {
                 position,
                 description,
-                salary,
+                salary: isSalaryVisible ? salary : "",
                 location,
                 formLink,
             });
             setIsEditing(false);
             setEditingJob(null);
         } else {
-            //Creatin of new vacancy
+            // Creating a new job
             const docRef = await addDoc(collection(db, "jobs"), {
                 position,
                 description,
-                salary,
+                salary: isSalaryVisible ? salary : "",
                 location,
                 formLink,
             });
             console.log("Document written with ID: ", docRef.id);
         }
+        setPosition("");
+        setDescription("");
+        setSalary("");
+        setLocation("");
+        setIsSalaryVisible(false);
     };
 
     // Fetching the jobs from the database
@@ -76,6 +82,7 @@ const Career = () => {
         setLocation(job.location);
         setFormLink(job.formLink);
         setIsEditing(true);
+        setIsSalaryVisible(!!job.salary);
     };
 
     // Handling the change in the location
@@ -88,7 +95,7 @@ const Career = () => {
         setReadMore((prevReadMore) => ({ ...prevReadMore, [id]: !prevReadMore[id] }));
     };
 
-    const disabled = !position || !description || !salary || !location || !formLink;
+    const disabled = !position || !description || (isSalaryVisible && !salary) || !location || !formLink;
 
     return (
         <>
@@ -122,22 +129,28 @@ const Career = () => {
                             placeholder="Job description"
                             sx={{ marginBottom: 2 }}
                         />
-                        <TextField
-                            type="text"
-                            size="small"
-                            fullWidth
-                            value={salary}
-                            onChange={(e) => setSalary(e.target.value)}
-                            placeholder="Salary"
-                            sx={{ marginBottom: 2, input: { color: "var(--color-dark)" } }}
-                            inputProps={{
-                                onKeyPress: (e) => {
-                                    if (!/[0-9.,]/.test(e.key) && e.key !== "Backspace") {
-                                        e.preventDefault();
-                                    }
-                                },
-                            }}
-                        />
+                        <div className="salary-checkbox">
+                            <FormControlLabel
+                                control={
+                                    <Checkbox
+                                        checked={isSalaryVisible}
+                                        onChange={(e) => setIsSalaryVisible(e.target.checked)}
+                                    />
+                                }
+                                label="Include Salary"
+                            />
+                        </div>
+                        {isSalaryVisible && (
+                            <TextField
+                                type="text"
+                                size="small"
+                                fullWidth
+                                value={salary}
+                                onChange={(e) => setSalary(e.target.value)}
+                                placeholder="Salary"
+                                sx={{ marginBottom: 2, input: { color: "var(--color-dark)" } }}
+                            />
+                        )}
                         <Select
                             size="small"
                             fullWidth
@@ -173,11 +186,11 @@ const Career = () => {
                     </div>
                 )}
                 {storedJobs.map((job) => (
-                    <div className="job-card-wrapper">
-                        <ul
-                            key={job.id}
-                            className="job-card"
-                        >
+                    <div
+                        className="job-card-wrapper"
+                        key={job.id}
+                    >
+                        <ul className="job-card">
                             <li variant="h5">
                                 <p>Position:</p>
                                 {job.position}
@@ -186,9 +199,11 @@ const Career = () => {
                                 <p>Description:</p>
                                 {job.description}
                             </li>
-                            <li>
-                                <p>Salary Biweekly:</p>${job.salary}
-                            </li>
+                            {job.salary && (
+                                <li>
+                                    <p>Salary:</p>${job.salary}
+                                </li>
+                            )}
                             <li>
                                 <p>Location:</p>
                                 {job.location}
