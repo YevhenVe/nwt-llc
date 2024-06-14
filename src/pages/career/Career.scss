@@ -74,6 +74,8 @@
                 overflow: hidden;
                 max-height: 25px;
                 transition: max-height 200ms ease;
+                white-space: pre-wrap;
+                word-wrap: break-word;
             }
             .description-more {
                 max-height: 300px;
