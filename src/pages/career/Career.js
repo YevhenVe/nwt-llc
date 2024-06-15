@@ -196,9 +196,12 @@ const Career = () => {
                                 {job.position}
                             </li>
                             <li className={`description ${readMore[job.id] ? "description-more" : ""}`}>
-                                <p>Description:</p>
-                                {job.description}
+                                <div className="description-label">Description:</div>
+                                <div className={`description-job ${readMore[job.id] ? "description-job-more" : ""}`}>{job.description}</div>
                             </li>
+                            <div className="read-more-button">
+                                <div onClick={() => handleReadMore(job.id)}>{readMore[job.id] ? "Read less ⤴" : "Read more ⤵"}</div>
+                            </div>
                             {job.salary && (
                                 <li>
                                     <p>Salary:</p>${job.salary}
@@ -235,14 +238,6 @@ const Career = () => {
                                 >
                                     <CustomButton label="Fill out form"></CustomButton>
                                 </a>
-                            </div>
-                            <div>
-                                <p
-                                    onClick={() => handleReadMore(job.id)}
-                                    className="read-more-button"
-                                >
-                                    {readMore[job.id] ? "Read less" : "Read more"}
-                                </p>
                             </div>
                         </div>
                     </div>

@@ -54,22 +54,27 @@
     }
     .job-card-wrapper {
         width: 100%;
-        max-width: 700px;
+        max-width: 900px;
         border: 1px solid rgba(0, 0, 0, 0.1);
         border-radius: 25px;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 4px 12px;
         padding: 20px 30px;
         margin-bottom: 45px;
         overflow-x: auto;
         color: var(--color-dark);
+        transition: scale 200ms ease;
+        &:hover {
+            scale: (1.03);
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
         .job-card {
+            position: relative;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: self-start;
             margin-bottom: 25px;
             padding-left: 0;
-            text-align: justify;
             .description {
                 overflow: hidden;
                 max-height: 25px;
@@ -79,16 +84,42 @@
             }
             .description-more {
                 max-height: 300px;
-                overflow-y: auto;
-                padding-right: 15px;
+                @media screen and (max-width: 500px) {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+            .read-more-button {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                padding-right: 10px;
+                div {
+                    transition: all 200ms ease;
+                    cursor: pointer;
+                    &:hover {
+                        font-weight: 600;
+                    }
+                }
             }
             li {
                 display: flex;
                 flex-direction: row;
                 margin-bottom: 10px;
-                p {
+                p,
+                .description-label {
                     margin-right: 10px;
                     font-weight: 600;
+                }
+                .description-job {
+                    padding-right: 15px;
+                }
+                .description-job-more {
+                    overflow-y: auto;
+                    @media screen and (max-width: 500px) {
+                        margin: 20px 0;
+                    }
                 }
             }
         }
@@ -99,18 +130,13 @@
             justify-content: space-between;
             list-style: none;
             padding: 0;
+            margin-bottom: 20px;
             width: 100%;
             .fill-out-form-button {
                 text-align: center;
                 justify-self: center;
             }
-            .read-more-button {
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-                justify-content: end;
-                height: 100%;
-            }
+
             .manage-buttons {
                 display: flex;
                 .delete-job-button,
