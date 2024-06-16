@@ -154,6 +154,22 @@
             }
         }
     }
+    .pagination-buttonbox {
+        display: flex;
+        justify-content: center;
+        button {
+            margin: 0 5px;
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+            font-size: 20px;
+            color: var(--color-dark);
+            transition: scale 200ms ease;
+            &:hover {
+                scale: (1.1);
+            }
+        }
+    }
 }
 .vh100 {
     height: 100vh;

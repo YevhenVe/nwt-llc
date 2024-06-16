@@ -13,6 +13,7 @@ import { collection, addDoc, deleteDoc, doc, onSnapshot, updateDoc } from "fireb
 import "./Career.scss";
 
 const Career = () => {
+    const { t } = useTranslation();
     const { currentUser } = useContext(AuthContext);
     const [position, setPosition] = useState("");
     const [salary, setSalary] = useState("");
@@ -24,7 +25,27 @@ const Career = () => {
     const [editingJob, setEditingJob] = useState(null);
     const [isEditing, setIsEditing] = useState(false);
     const [isSalaryVisible, setIsSalaryVisible] = useState(false);
-    const { t } = useTranslation();
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 5;
+
+    //paginationconst
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    const currentItems = storedJobs.slice(indexOfFirstItem, indexOfLastItem);
+
+    const totalPages = Math.ceil(storedJobs.length / itemsPerPage);
+
+    const handleNextPage = () => {
+        setCurrentPage(currentPage + 1);
+    };
+
+    const handlePrevPage = () => {
+        setCurrentPage(currentPage - 1);
+    };
+    const pageNumbers = [];
+    for (let i = 1; i <= totalPages; i++) {
+        pageNumbers.push(i);
+    }
 
     // Adding new jobs to the database
     const onSubmit = async () => {
@@ -185,7 +206,7 @@ const Career = () => {
                         />
                     </div>
                 )}
-                {storedJobs.map((job) => (
+                {currentItems.map((job) => (
                     <div
                         className="job-card-wrapper"
                         key={job.id}
@@ -242,6 +263,31 @@ const Career = () => {
                         </div>
                     </div>
                 ))}
+                <div className="pagination-buttonbox">
+                    <button
+                        disabled={currentPage === 1}
+                        onClick={handlePrevPage}
+                    >
+                        ＜
+                    </button>
+                    <div>
+                        {pageNumbers.map((number) => (
+                            <button
+                                key={number}
+                                onClick={() => setCurrentPage(number)}
+                                style={{ fontWeight: currentPage === number ? "bold" : "normal" }}
+                            >
+                                {number}
+                            </button>
+                        ))}
+                    </div>
+                    <button
+                        disabled={currentPage === totalPages}
+                        onClick={handleNextPage}
+                    >
+                        ＞
+                    </button>
+                </div>
             </div>
             <Footer />
         </>
