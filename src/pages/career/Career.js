@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
 import Header from 'components/header/Header';
 import Footer from 'components/footer/footer';
 import CustomButton from 'components/customButton/CustomButton';
@@ -15,8 +14,6 @@ import './Career.scss';
 
 const Career = () => {
   const { t } = useTranslation();
-  const navigate = useNavigate();
-  const { page } = useParams();
   const { currentUser } = useContext(AuthContext);
   const [position, setPosition] = useState('');
   const [salary, setSalary] = useState('');
@@ -39,7 +36,6 @@ const Career = () => {
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
-    navigate(`/career/${page}`);
   };
   const handleNextPage = () => {
     if (currentPage < totalPages) {
@@ -52,14 +48,6 @@ const Career = () => {
       handlePageChange(currentPage - 1);
     }
   };
-  useEffect(() => {
-    const pageNumber = Number(page);
-    if (isNaN(pageNumber) || pageNumber <= 0) {
-      navigate('/career/1', { replace: true });
-    } else {
-      setCurrentPage(pageNumber);
-    }
-  }, [page, navigate]);
 
   // Adding new jobs to the database
   const onSubmit = async () => {
@@ -271,7 +259,6 @@ const Career = () => {
                 key={i + 1}
                 onClick={() => handlePageChange(i + 1)}
                 className={currentPage === i + 1 ? 'active' : ''}
-                disabled={currentPage === i + 1}
               >
                 {i + 1}
               </button>

@@ -1,4 +1,3 @@
-// routes.js
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Main from 'pages/main/Main';
@@ -20,7 +19,7 @@ const AppRoutes = () => {
       <Route path="/training" element={<Training />} />
       <Route path="/partnership" element={<Partnership />} />
       <Route path="/adminlogin" element={<Aadminlogin />} />
-      <Route path="/career/:page?" element={<Career />} />
+      <Route path="/career" element={<Career />} />
       <Route path="/fiber-training" element={<FiberTraining />} />
       <Route path="/tower-training" element={<TowerTraining />} />
     </Routes>

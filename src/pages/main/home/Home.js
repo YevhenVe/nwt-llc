@@ -14,7 +14,6 @@ const Home = () => {
   const [open, setOpen] = useState(false);
   const handleClose = () => setOpen(false);
   const navigate = useNavigate();
-
   const { t } = useTranslation();
 
   return (
@@ -25,7 +24,7 @@ const Home = () => {
       <div className="home-content-wrapper">
         <div className="pre-title">{t('COMMUNICATIONS SOLUTIONS')}</div>
         <div className="slogan">Plan, Execute, Deliver! </div>
-        <CustomButton label="Career Opportunities" onClick={() => navigate('/career/1')} />
+        <CustomButton label="Career Opportunities" onClick={() => navigate('/career')} />
         <Link className="link" activeClass="active" to="about" smooth spy offset={-59} duration={300}>
           <div className="arrow-down">
             <ArrowDownIcon />
