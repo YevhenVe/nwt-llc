@@ -1,74 +1,29 @@
-import React, { useState } from "react";
-import CookieBanner from "react-cookie-banner";
-import { Routes, Route } from "react-router-dom";
-import Main from "pages/main/Main";
-import NotFoundPage from "pages/notFoundPage/NotFoundPage";
-import EmailSent from "pages/emailSent/EmailSent";
-import Training from "pages/training/TrainingMain";
-import Partnership from "pages/partnership/PartnershipMain";
-import CustomCookieModal from "./components/customCookieModal/CustomCookieModal";
-import Aadminlogin from "pages/adminlogin/Aadminlogin";
-import Career from "pages/career/Career";
-import FiberTraining from "pages/training/fiberTraining/FiberTraining";
-import TowerTraining from "pages/training/towerTraining/TowerTraining";
-import "./styles/Index.scss";
+import React, { useState } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import CookieBanner from 'react-cookie-banner';
+import ScrollOnTop from 'components/scrollontop/ScrollOnTop';
+import { ContextProvider } from 'contexts/Context';
+import CustomCookieModal from './components/customCookieModal/CustomCookieModal';
+import AppRoutes from './Routes';
+import './styles/Index.scss';
 
 function App() {
-    const [cookieModalIsOpen, setCookieModalIsOpen] = useState(false);
-    return (
-        <>
-            <Routes>
-                <Route
-                    path="/"
-                    exact
-                    element={<Main />}
-                />
-                <Route
-                    path="/email-sent"
-                    exact
-                    element={<EmailSent />}
-                />
-                <Route
-                    path="*"
-                    element={<NotFoundPage />}
-                />
-                <Route
-                    path="/training"
-                    element={<Training />}
-                />
-                <Route
-                    path="/partnership"
-                    element={<Partnership />}
-                />
-                <Route
-                    path="/adminlogin"
-                    element={<Aadminlogin />}
-                />
-                <Route
-                    path="/career/:page?"
-                    element={<Career />}
-                />
-                <Route
-                    path="/fiber-training"
-                    element={<FiberTraining />}
-                />
-                <Route
-                    path="/tower-training"
-                    element={<TowerTraining />}
-                />
-            </Routes>
-            <CustomCookieModal
-                isOpen={cookieModalIsOpen}
-                onClose={() => setCookieModalIsOpen(false)}
-            />
-            <CookieBanner
-                onAccept={() => {
-                    setCookieModalIsOpen(true);
-                }}
-                cookie="user-has-accepted-cookies"
-            />
-        </>
-    );
+  const [cookieModalIsOpen, setCookieModalIsOpen] = useState(false);
+  return (
+    <Router>
+      <ContextProvider>
+        <ScrollOnTop />
+        <AppRoutes />
+        <CustomCookieModal isOpen={cookieModalIsOpen} onClose={() => setCookieModalIsOpen(false)} />
+        <CookieBanner
+          onAccept={() => {
+            setCookieModalIsOpen(true);
+          }}
+          cookie="user-has-accepted-cookies"
+        />
+      </ContextProvider>
+    </Router>
+  );
 }
 
 export default App;
