@@ -45,7 +45,7 @@ function App() {
                     element={<Aadminlogin />}
                 />
                 <Route
-                    path="/career"
+                    path="/career/:page?"
                     element={<Career />}
                 />
                 <Route

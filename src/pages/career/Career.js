@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import Header from "components/header/Header";
 import Footer from "components/footer/footer";
 import CustomButton from "components/customButton/CustomButton";
@@ -14,6 +15,8 @@ import "./Career.scss";
 
 const Career = () => {
     const { t } = useTranslation();
+    const navigate = useNavigate();
+    const { page } = useParams();
     const { currentUser } = useContext(AuthContext);
     const [position, setPosition] = useState("");
     const [salary, setSalary] = useState("");
@@ -32,20 +35,26 @@ const Career = () => {
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const currentItems = storedJobs.slice(indexOfFirstItem, indexOfLastItem);
-
     const totalPages = Math.ceil(storedJobs.length / itemsPerPage);
 
+    const handlePageChange = (pageNumber) => {
+        setCurrentPage(pageNumber);
+        navigate(`/career/${pageNumber}`);
+    };
     const handleNextPage = () => {
-        setCurrentPage(currentPage + 1);
+        if (currentPage < totalPages) {
+            handlePageChange(currentPage + 1);
+        }
     };
 
     const handlePrevPage = () => {
-        setCurrentPage(currentPage - 1);
+        if (currentPage > 1) {
+            handlePageChange(currentPage - 1);
+        }
     };
-    const pageNumbers = [];
-    for (let i = 1; i <= totalPages; i++) {
-        pageNumbers.push(i);
-    }
+    useEffect(() => {
+        setCurrentPage(parseInt(page) || 1);
+    }, [page]);
 
     // Adding new jobs to the database
     const onSubmit = async () => {
@@ -263,31 +272,32 @@ const Career = () => {
                         </div>
                     </div>
                 ))}
-                <div className="pagination-buttonbox">
-                    <button
-                        disabled={currentPage === 1}
-                        onClick={handlePrevPage}
-                    >
-                        ＜
-                    </button>
-                    <div>
-                        {pageNumbers.map((number) => (
+                {currentItems.length > 0 && (
+                    <div className="pagination-buttonbox">
+                        <button
+                            onClick={handlePrevPage}
+                            disabled={currentPage === 1}
+                        >
+                            ＜ Previous
+                        </button>
+                        {Array.from({ length: totalPages }, (_, i) => (
                             <button
-                                key={number}
-                                onClick={() => setCurrentPage(number)}
-                                style={{ fontWeight: currentPage === number ? "bold" : "normal" }}
+                                key={i + 1}
+                                onClick={() => handlePageChange(i + 1)}
+                                className={currentPage === i + 1 ? "active" : ""}
+                                disabled={currentPage === i + 1}
                             >
-                                {number}
+                                {i + 1}
                             </button>
                         ))}
+                        <button
+                            onClick={handleNextPage}
+                            disabled={currentPage === totalPages}
+                        >
+                            Next ＞
+                        </button>
                     </div>
-                    <button
-                        disabled={currentPage === totalPages}
-                        onClick={handleNextPage}
-                    >
-                        ＞
-                    </button>
-                </div>
+                )}
             </div>
             <Footer />
         </>

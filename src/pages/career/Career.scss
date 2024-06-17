@@ -165,9 +165,27 @@
             font-size: 20px;
             color: var(--color-dark);
             transition: scale 200ms ease;
+            transition: all 200ms ease;
+            padding: 5px 10px;
             &:hover {
-                scale: (1.1);
+                background-color: var(--accent-color);
+                border-radius: 10px;
+                color: #fff;
             }
+            &:disabled {
+                cursor: auto;
+                &:hover {
+                    scale: 1;
+                    background-color: transparent;
+                    color: var(--color-dark);
+                }
+            }
+        }
+        .active {
+            background-color: var(--accent-color);
+            border-radius: 10px;
+            color: #fff;
+            font-weight: 600;
         }
     }
 }
