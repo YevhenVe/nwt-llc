@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Header from 'components/header/Header';
 import Footer from 'components/footer/footer';
 import CustomButton from 'components/customButton/CustomButton';
@@ -27,6 +28,12 @@ const Career = () => {
   const [isSalaryVisible, setIsSalaryVisible] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
+  const navigate = useNavigate();
+  const urlLocation = useLocation();
+
+  //parsing query params
+  const searchParams = new URLSearchParams(urlLocation.search);
+  const page = parseInt(searchParams.get('page')) || 1;
 
   //pagination
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -34,19 +41,26 @@ const Career = () => {
   const currentItems = storedJobs.slice(indexOfFirstItem, indexOfLastItem);
   const totalPages = Math.ceil(storedJobs.length / itemsPerPage);
 
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-  };
   const handleNextPage = () => {
-    if (currentPage < totalPages) {
-      handlePageChange(currentPage + 1);
+    const nextPageNumber = currentPage + 1;
+    if (nextPageNumber <= totalPages) {
+      goToPage(nextPageNumber);
     }
   };
 
   const handlePrevPage = () => {
     if (currentPage > 1) {
-      handlePageChange(currentPage - 1);
+      const prevPage = currentPage - 1;
+      goToPage(prevPage);
     }
+  };
+
+  useEffect(() => {
+    setCurrentPage(page);
+  }, [page]);
+
+  const goToPage = (page) => {
+    navigate(`/career?page=${page}`);
   };
 
   // Adding new jobs to the database
@@ -255,11 +269,7 @@ const Career = () => {
               ＜ Previous
             </button>
             {Array.from({ length: totalPages }, (_, i) => (
-              <button
-                key={i + 1}
-                onClick={() => handlePageChange(i + 1)}
-                className={currentPage === i + 1 ? 'active' : ''}
-              >
+              <button key={i + 1} onClick={() => goToPage(i + 1)} className={currentPage === i + 1 ? 'active' : ''}>
                 {i + 1}
               </button>
             ))}

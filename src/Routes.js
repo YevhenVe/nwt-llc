@@ -13,8 +13,8 @@ import TowerTraining from 'pages/training/towerTraining/TowerTraining';
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/" exact element={<Main />} />
-      <Route path="/email-sent" exact element={<EmailSent />} />
+      <Route path="/" element={<Main />} />
+      <Route path="/email-sent" element={<EmailSent />} />
       <Route path="*" element={<NotFoundPage />} />
       <Route path="/training" element={<Training />} />
       <Route path="/partnership" element={<Partnership />} />
