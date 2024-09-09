@@ -1,0 +1,98 @@
+.gallery-wrapper {
+  margin: 120px 0;
+  .gallery-container {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .gallery {
+      max-width: 960px;
+      display: flex;
+      justify-content: start;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 25px;
+      @media screen and (max-width: 945px) {
+        justify-content: center;
+      }
+      .gallery-item {
+        position: relative;
+        img {
+          width: 300px;
+          height: 300px;
+          object-fit: cover;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+        .remove-image {
+          cursor: pointer;
+          position: absolute;
+          right: 20px;
+          bottom: 20px;
+        }
+      }
+    }
+    .add-image-box {
+      display: flex;
+      margin-bottom: 25px;
+      input {
+        margin-right: 15px;
+      }
+      button {
+        cursor: pointer;
+      }
+    }
+    .sort-dropdown {
+      width: 100%;
+      max-width: 960px;
+      margin-bottom: 25px;
+      font-size: 0.8rem;
+      select {
+        border-radius: 8px;
+        padding: 0px 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.modal {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+  img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+  }
+  .close {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    font-size: 50px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .prev,
+  .next {
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+  }
+  .prev {
+    transform: rotate(-90deg);
+  }
+  .next {
+    transform: rotate(90deg);
+  }
+}

@@ -1,58 +1,57 @@
 .slider-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 120px;
+  .label {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin-bottom: 120px;
-    .label {
-        display: flex;
-        justify-content: center;
-        font-weight: 700;
-        flex-wrap: wrap;
-        font-size: 42px;
-        text-transform: uppercase;
-        margin-bottom: 50px;
-        .pre-label {
-            margin-right: 20px;
-            color: var(--accent-color);
-        }
-        .after-label {
-            color: var(--color-dark);
-        }
+    font-weight: 700;
+    flex-wrap: wrap;
+    font-size: 42px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    .pre-label {
+      margin-right: 20px;
+      color: var(--accent-color);
     }
-    .slider {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        max-width: 1280px;
-        .gradient-left,
-        .gradient-right {
-            position: absolute;
-            top: 0;
-            height: 100%;
-            width: 150px;
-            z-index: 2;
-        }
-        .gradient-left {
-            background: linear-gradient(90deg, var(--color-light) 0%, rgba(255, 255, 255, 0) 100%);
-            left: 0;
-        }
-        .gradient-right {
-            background: linear-gradient(-90deg, var(--color-light) 0%, rgba(255, 255, 255, 0) 100%);
-            right: 0;
-        }
-        .image-box {
-            margin-right: 120px;
-            img {
-                width: 250px;
-                height: 250px;
-                object-fit: contain;
-                cursor: pointer;
-                transition: all 200ms ease-in-out;
-                &:hover {
-                    scale: 1.1;
-                }
-            }
-        }
+    .after-label {
+      color: var(--color-dark);
     }
+  }
+  .slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1280px;
+    .gradient-left,
+    .gradient-right {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 150px;
+      z-index: 2;
+    }
+    .gradient-left {
+      background: linear-gradient(90deg, var(--color-light) 0%, rgba(255, 255, 255, 0) 100%);
+      left: 0;
+    }
+    .gradient-right {
+      background: linear-gradient(-90deg, var(--color-light) 0%, rgba(255, 255, 255, 0) 100%);
+      right: 0;
+    }
+    .image-box {
+      margin-right: 120px;
+      img {
+        width: 250px;
+        height: 250px;
+        object-fit: contain;
+        transition: all 200ms ease-in-out;
+        &:hover {
+          scale: 1.1;
+        }
+      }
+    }
+  }
 }
