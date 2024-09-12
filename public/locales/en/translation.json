@@ -13,6 +13,7 @@
   "contact":"contact",
   "follow":"follow",
   "COMMUNICATIONS SOLUTIONS":"COMMUNICATIONS SOLUTIONS",
+  "Career Opportunities":"Career Opportunies",
   "get hiring":"get hiring",
   "download":"download",
   "submit":"submit",
@@ -56,6 +57,9 @@
   "opportunities":"opportunities",
   "trusted":"trusted",
   "partners":"partners",
-  "clients":"clients"
+  "clients":"clients",
+  "Tower Training":"Tower Training",
+  "Fiber Training":"Fiber Training",
+  "Gallery":"Gallery"
 }
 

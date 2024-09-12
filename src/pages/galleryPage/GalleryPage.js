@@ -2,6 +2,7 @@ import { useContext, useState } from 'react';
 import { AuthContext, GalleryContext } from 'contexts/Context';
 import { addDoc, collection, deleteDoc, doc } from 'firebase/firestore';
 import CustomButton from 'components/customButton/CustomButton';
+import { useTranslation } from 'react-i18next';
 import { db } from '../../Firebase';
 import Footer from 'components/footer/footer';
 import Header from 'components/header/Header';
@@ -14,6 +15,7 @@ const GalleryPage = () => {
   const [visibleImages, setVisibleImages] = useState(6);
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0); // Добавлено состояние для текущего индекса изображения
+  const { t } = useTranslation();
 
   // Add image to gallery
   const addImage = async () => {
@@ -80,7 +82,7 @@ const GalleryPage = () => {
       <Header />
       <div className="gallery-wrapper">
         <div className="gallery-container">
-          <h1>Gallery</h1>
+          <h1>{t('Gallery')}</h1>
           {userLoggedIn ? (
             <div className="add-image-box">
               <input

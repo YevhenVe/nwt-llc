@@ -13,6 +13,7 @@
   "contact":"contacto",
   "follow":"siga",
   "COMMUNICATIONS SOLUTIONS":"SOLUCIONES DE COMUNICACIÓN",
+  "Career Opportunities":"Oportunidades Profesionales",
   "get hiring":"contratar",
   "download":"descargar",
   "submit":"enviar",
@@ -56,5 +57,8 @@
   "opportunities":"oportunidades",
   "trusted":"de confianza",
   "partners":"socios",
-  "clients":"clientes"
+  "clients":"clientes",
+   "Tower Training":"Formación en torres",
+   "Fiber Training":"Formación en Fibra óptica",
+   "Gallery":"Galería"
 }
