@@ -16,8 +16,8 @@ const TrainingMain = () => {
         <div className="training-box-tower" onClick={() => navigate('/tower-training')}>
           <p>{t('Tower Training')}</p>
         </div>
-        <div className="training-box-fiber" onClick={() => navigate('/fiber-training')}>
-          <p>{t('Fiber Training')}</p>
+        <div className="training-box-matts" onClick={() => navigate('/matts-training')}>
+          <p>{t('Matt`s Arm Training')}</p>
         </div>
       </div>
       <Footer />

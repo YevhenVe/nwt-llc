@@ -6,6 +6,7 @@ import { ReactComponent as EmailIcon } from 'assets/icons/Email.svg';
 import { ReactComponent as FacebookIcon } from 'assets/icons/Facebook.svg';
 import { ReactComponent as InstagramIcon } from 'assets/icons/Instagram.svg';
 import { ReactComponent as YoutubeIcon } from 'assets/icons/Youtube.svg';
+import { ReactComponent as LinkedinIcon } from 'assets/icons/Linkedin.svg';
 import OfficeImage from 'assets/images/office.jpg';
 import ContactForm from 'components/contactForm/contactForm';
 import './Contacts.scss';
@@ -67,6 +68,14 @@ const Contacts = () => {
             </a>
             <a href="https://www.youtube.com/@officenwt" target="_blank" rel="noopener noreferrer" title="Youtube">
               <YoutubeIcon />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/nwt-llc/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Youtube"
+            >
+              <LinkedinIcon />
             </a>
           </div>
         </div>

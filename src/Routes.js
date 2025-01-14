@@ -8,7 +8,7 @@ import Partnership from 'pages/partnership/PartnershipMain';
 import GalleryPage from 'pages/galleryPage/GalleryPage';
 import Aadminlogin from 'pages/adminlogin/Aadminlogin';
 import Career from 'pages/career/Career';
-import FiberTraining from 'pages/training/fiberTraining/FiberTraining';
+import MattsTraining from 'pages/training/mattsTraining/MattsTraining';
 import TowerTraining from 'pages/training/towerTraining/TowerTraining';
 
 const AppRoutes = () => {
@@ -21,7 +21,7 @@ const AppRoutes = () => {
       <Route path="/partnership" element={<Partnership />} />
       <Route path="/adminlogin" element={<Aadminlogin />} />
       <Route path="/career" element={<Career />} />
-      <Route path="/fiber-training" element={<FiberTraining />} />
+      <Route path="/matts-training" element={<MattsTraining />} />
       <Route path="/tower-training" element={<TowerTraining />} />
       <Route path="/gallery" element={<GalleryPage />} />
     </Routes>
