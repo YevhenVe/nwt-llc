@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import ReactQuill from 'react-quill';
 import Header from 'components/header/Header';
 import Footer from 'components/footer/footer';
 import CustomButton from 'components/customButton/CustomButton';
 import Locations from './Locations.json';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { db } from '../../Firebase';
 import { AuthContext } from 'contexts/Context';
 import { useTranslation } from 'react-i18next';
@@ -11,7 +12,9 @@ import { MenuItem, Select, TextField, Checkbox, FormControlLabel } from '@mui/ma
 import { ReactComponent as RemoveIcon } from 'assets/icons/Remove.svg';
 import { ReactComponent as EditIcon } from 'assets/icons/Edit.svg';
 import { collection, addDoc, deleteDoc, doc, onSnapshot, updateDoc } from 'firebase/firestore';
+import 'react-quill/dist/quill.snow.css';
 import './Career.scss';
+import min from './../../../node_modules/lodash-es/min';
 
 const Career = () => {
   const { t } = useTranslation();
@@ -158,17 +161,20 @@ const Career = () => {
               placeholder="Position Name"
               sx={{ marginBottom: 2, input: { color: 'var(--color-dark)' } }}
             />
-            <TextField
-              type="text"
-              size="small"
-              multiline
-              rows={6}
-              maxRows={4}
-              fullWidth
+            <ReactQuill
               value={description}
-              onChange={(e) => setDescription(e.target.value)}
+              onChange={setDescription}
+              className="custom-quill"
               placeholder="Job description"
-              sx={{ marginBottom: 2 }}
+              modules={{
+                toolbar: [['bold', 'italic', 'underline'], [{ list: 'ordered' }, { list: 'bullet' }], ['link']],
+              }}
+              style={{
+                width: '100%',
+                marginBottom: '16px',
+                backgroundColor: 'var(--color-light)',
+                color: 'var(--color-dark)',
+              }}
             />
             <div className="salary-checkbox">
               <FormControlLabel
@@ -220,30 +226,33 @@ const Career = () => {
         )}
         {currentItems.map((job) => (
           <div className="job-card-wrapper" key={job.id}>
-            <ul className="job-card">
-              <li variant="h5">
+            <div className="job-card">
+              <div className="job-card-position" variant="h5">
                 <p>Position:</p>
                 {job.position}
-              </li>
-              <li className={`description ${readMore[job.id] ? 'description-more' : ''}`}>
+              </div>
+              <div className={`description ${readMore[job.id] ? 'description-more' : ''}`}>
                 <div className="description-label">Description:</div>
-                <div className={`description-job ${readMore[job.id] ? 'description-job-more' : ''}`}>
-                  {job.description}
-                </div>
-              </li>
+                <div
+                  className={`description-job ${readMore[job.id] ? 'description-job-more' : ''}`}
+                  dangerouslySetInnerHTML={
+                    typeof job.description === 'string' ? { __html: job.description } : { __html: '' }
+                  }
+                />
+              </div>
               <div className="read-more-button">
                 <div onClick={() => handleReadMore(job.id)}>{readMore[job.id] ? 'Read less ⤴' : 'Read more ⤵'}</div>
               </div>
               {job.salary && (
-                <li>
+                <div className="job-card-salary">
                   <p>Salary:</p>${job.salary}
-                </li>
+                </div>
               )}
-              <li>
+              <div className="job-card-location">
                 <p>Location:</p>
                 {job.location}
-              </li>
-            </ul>
+              </div>
+            </div>
             <div className="button-box">
               {currentUser && (
                 <div className="manage-buttons">
