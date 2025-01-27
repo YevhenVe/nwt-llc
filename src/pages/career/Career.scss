@@ -1,32 +1,45 @@
+.career-label {
+  margin-top: 120px;
+  height: 300px;
+  background: linear-gradient(90deg, rgba(70, 116, 131, 0.9), rgb(255, 255, 255, 0.4), rgba(70, 116, 131, 0.9)),
+    url('../../assets/images/careerop_300.jpg') no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-weight: 700;
+  font-size: 42px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  @media screen and (max-width: 986px) {
+    font-size: 28px;
+    align-content: center;
+    justify-content: center;
+  }
+  .pre-label,
+  .after-label {
+    filter: drop-shadow(0 0px 15px rgb(255, 255, 255)) drop-shadow(0 0px 15px rgb(255, 255, 255));
+  }
+  .pre-label {
+    margin-right: 20px;
+    color: var(--accent-color);
+  }
+  .after-label {
+    color: rgba(45, 70, 78, 1);
+  }
+}
 .career-page-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   height: 100%;
-  margin: 200px 0;
+  margin-bottom: 200px;
   padding: 0 25px;
   .no-opportunities {
     margin-bottom: 25px;
-  }
-  .career-label {
-    display: flex;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 42px;
-    text-transform: uppercase;
-    margin-bottom: 40px;
-    @media screen and (max-width: 986px) {
-      font-size: 28px;
-      line-height: 36px;
-    }
-    .pre-label {
-      margin-right: 20px;
-      color: var(--accent-color);
-    }
-    .after-label {
-      color: var(--color-dark);
-    }
   }
   .new-career-opportunity-form {
     display: flex;
@@ -57,14 +70,12 @@
     max-width: 900px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 25px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 4px 12px;
     padding: 20px 30px;
     margin-bottom: 45px;
     overflow-x: auto;
     color: var(--color-dark);
-    transition: scale 200ms ease;
+    transition: all 300ms ease;
     &:hover {
-      scale: (1.03);
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     }
     .job-card {
@@ -185,7 +196,40 @@
       font-weight: 600;
     }
   }
+  .filters-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 20px;
+    .MuiInputBase-root {
+      border-radius: 15px;
+    }
+    .MuiFormControl-root {
+      background-color: var(--color-light);
+      width: 200px;
+      color: var(--color-dark);
+      .MuiChip-root {
+        background-color: var(--color-primary);
+      }
+      .MuiFormLabel-root {
+        color: var(--color-dark);
+      }
+    }
+  }
 }
 .vh100 {
   height: 100vh;
+}
+.MuiPaper-root {
+  margin-top: 20px;
+  border-radius: 15px !important;
+  background-color: var(--second-color-dark) !important;
+  li {
+    color: var(--color-dark);
+    svg {
+      fill: var(--color-dark);
+    }
+  }
 }
