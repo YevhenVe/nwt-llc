@@ -45,10 +45,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     width: 100%;
-    max-width: 600px;
+    max-width: 900px;
     color: var(--color-dark);
+    margin-bottom: 30px;
     .add-new-job-button {
       margin-bottom: 45px;
       &:disabled {
@@ -59,6 +60,10 @@
         }
       }
     }
+    .custom-quill {
+      width: 100%;
+    }
+
     .salary-checkbox {
       width: 100%;
       display: flex;
@@ -112,12 +117,11 @@
         align-items: center;
         justify-content: end;
         padding-right: 10px;
-        div {
-          transition: all 200ms ease;
-          cursor: pointer;
-          &:hover {
-            font-weight: 600;
-          }
+        transition: all 200ms ease;
+        margin-top: 20px;
+        cursor: pointer;
+        &:hover {
+          font-weight: 600;
         }
       }
       .job-card-position,
@@ -144,7 +148,6 @@
         text-align: center;
         justify-self: center;
       }
-
       .manage-buttons {
         display: flex;
         .delete-job-button,
@@ -153,6 +156,9 @@
           height: 35px;
           margin-right: 15px;
           justify-self: center;
+          padding: 0;
+          border: none;
+          background: none;
           transition: scale 200ms ease;
           cursor: pointer;
           &:hover {
@@ -160,40 +166,6 @@
           }
         }
       }
-    }
-  }
-  .pagination-buttonbox {
-    display: flex;
-    justify-content: center;
-    button {
-      margin: 0 5px;
-      cursor: pointer;
-      border: none;
-      background-color: transparent;
-      font-size: 20px;
-      color: var(--color-dark);
-      transition: scale 200ms ease;
-      transition: all 200ms ease;
-      padding: 5px 10px;
-      &:hover {
-        background-color: var(--accent-color);
-        border-radius: 10px;
-        color: #fff;
-      }
-      &:disabled {
-        cursor: auto;
-        &:hover {
-          scale: 1;
-          background-color: transparent;
-          color: var(--color-dark);
-        }
-      }
-    }
-    .active {
-      background-color: var(--accent-color);
-      border-radius: 10px;
-      color: #fff;
-      font-weight: 600;
     }
   }
   .filters-container {
