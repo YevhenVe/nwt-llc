@@ -1,114 +1,161 @@
-@use "styles/Variables.scss";
+@use 'styles/Variables.scss';
 
 .training-wrapper {
-    margin-top: 120px;
+  margin-top: 120px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .training-main-title {
+    text-align: center;
+    color: var(--color-light);
+    background: linear-gradient(90deg, rgba(70, 116, 131, 0.9), rgb(255, 255, 255, 0.4), rgba(70, 116, 131, 0.9)),
+      url('../../../../assets/images/training_ma.jpg') no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    width: 100%;
+    padding: 50px 15px;
+    display: flex;
+    justify-content: center;
+
+    .training-main-title-content {
+      width: var(--desktop-max-width);
+      font-size: 18px;
+      .training-label {
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-weight: 700;
+        font-size: 42px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        @media screen and (max-width: 986px) {
+          font-size: 28px;
+          align-content: center;
+          justify-content: center;
+        }
+        .pre-label,
+        .after-label {
+          filter: drop-shadow(0 0px 15px rgb(255, 255, 255)) drop-shadow(0 0px 15px rgb(255, 255, 255));
+        }
+        .pre-label {
+          margin-right: 20px;
+          color: var(--accent-color);
+        }
+        .after-label {
+          color: rgba(45, 70, 78, 1);
+        }
+      }
+      .training-ps {
+        text-align: left;
+        margin-bottom: 40px;
+      }
+      .training-price-box {
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 20px;
+        width: fit-content;
+        padding: 10px 20px;
+        margin: 25px 0 25px 20px;
+        background-color: var(--accent-color);
+      }
+    }
+
+    .training-list {
+      text-align: left;
+    }
+  }
+
+  .training-content-wrapper {
     width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    .training-main-title {
+    .trainig-content {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: var(--desktop-max-width);
+      .training-title {
         text-align: center;
-        margin-bottom: 45px;
-        color: var(--color-light);
-        background-color: var(--main-color);
-        width: 100%;
-        padding: 50px 15px;
+        margin: 40px 0 80px 0;
+        color: var(--color-dark);
+        h1 {
+          text-transform: capitalize;
+          color: var(--color-dark);
+        }
+        .traiing_academy_logo {
+          width: 100%;
+          max-width: 400px;
+        }
+        .custom-button-wrapper {
+          margin-bottom: 60px;
+        }
+        .product-overview-link {
+          .product-overview-image {
+            transition: all 0.3s ease;
+            filter: drop-shadow(0 0px 5px rgba(0, 0, 0, 0.1)) drop-shadow(0 0px 15px rgba(0, 0, 0, 0.1));
+            width: 300px;
+            &:hover {
+              transform: translateY(-15px) scale(1.05);
+              filter: drop-shadow(0 20px 15px rgba(0, 0, 0, 0.1)) drop-shadow(0 10px 15px rgba(0, 0, 0, 0.25));
+            }
+          }
+        }
+      }
+      .training-title-body {
+        max-width: 900px;
+        text-align: left;
+      }
+      .trining-contact-wrapper {
         display: flex;
         justify-content: center;
-
-        .training-main-title-content {
-            width: var(--desktop-max-width);
-            font-size: 18px;
-            .training-label {
-                font-size: 20px;
-            }
-            .training-ps {
-                text-align: left;
-                margin-bottom: 40px;
-            }
-            .training-price-box {
-                border-radius: 10px;
-                font-weight: 600;
-                font-size: 20px;
-                width: fit-content;
-                padding: 10px 20px;
-                margin: 25px 0 25px 20px;
-                background-color: var(--accent-color);
-            }
-        }
-
-        .training-list {
-            text-align: left;
-        }
-    }
-
-    .training-content-wrapper {
+        position: relative;
         width: 100%;
-        display: flex;
-        justify-content: center;
-
-        .trainig-content {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            width: var(--desktop-max-width);
-            .training-title {
-                text-align: center;
-                margin: 40px 0 80px 0;
-                color: var(--color-dark);
-                h1 {
-                    text-transform: capitalize;
-                    color: var(--color-dark);
-                }
-            }
-
-            .trining-contact-wrapper {
-                display: flex;
-                justify-content: center;
-                position: relative;
-                width: 100%;
-                margin-bottom: 60px;
-                @media screen and (max-width: 900px) {
-                    flex-wrap: wrap;
-                }
-                .training-photos {
-                    margin: 0 15px;
-                    width: 100%;
-                    max-width: 550px;
-                    img {
-                        width: 100%;
-                        filter: drop-shadow(0 7px 10px rgba(0, 0, 0, 0.2));
-                        @media screen and (max-width: 900px) {
-                            margin-bottom: 40px;
-                        }
-                    }
-                }
-
-                .contact-form {
-                    position: relative;
-                    margin: 0 15px;
-                    min-width: 650px;
-                    overflow-y: hidden;
-                    min-height: 800px;
-                    border-radius: 10px;
-                    overflow-x: hidden;
-                    @media screen and (max-width: 720px) {
-                        min-width: 100%;
-                        height: 800px;
-                    }
-                    svg {
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                    }
-                    .my-iframe {
-                        height: 100%;
-                        width: 100%;
-                        padding: 0;
-                    }
-                }
-            }
+        margin-bottom: 60px;
+        @media screen and (max-width: 900px) {
+          flex-wrap: wrap;
         }
+        .training-photos {
+          margin: 0 15px;
+          width: 100%;
+          max-width: 550px;
+          img {
+            width: 100%;
+            filter: drop-shadow(0 7px 10px rgba(0, 0, 0, 0.2));
+            @media screen and (max-width: 900px) {
+              margin-bottom: 40px;
+            }
+          }
+        }
+
+        .contact-form {
+          position: relative;
+          margin: 0 15px;
+          min-width: 650px;
+          overflow-y: hidden;
+          min-height: 800px;
+          border-radius: 10px;
+          overflow-x: hidden;
+          @media screen and (max-width: 720px) {
+            min-width: 100%;
+            height: 800px;
+          }
+          svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+          .my-iframe {
+            height: 100%;
+            width: 100%;
+            padding: 0;
+          }
+        }
+      }
     }
+  }
 }

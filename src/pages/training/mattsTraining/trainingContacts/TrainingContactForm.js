@@ -1,85 +1,50 @@
-import React, { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
-import { LoadedContext } from 'contexts/Context';
-import { ReactComponent as LoaderAnimation } from 'assets/icons/Loader.svg';
-import IllustrationImage from 'assets/images/Illustration4_.png';
+import TrainingAcademyLogo from 'assets/images/NWT_Training_Academy_Logo.png';
+import CustomButton from 'components/customButton/CustomButton';
+import MattsArmPdf from 'assets/documents/MattsArmOverview.pdf';
+import MattsProd from 'assets/images/matsproduct.png';
 import './TrainingContactForm.scss';
 
 const TrainingContactForm = () => {
-  const { loaded, handleIframeLoad } = useContext(LoadedContext);
   const { t } = useTranslation();
+  const URL = 'https://academy.nwt-llc.com/courses/offers/157e9f25-aab4-4766-8e84-5d706b058ce1';
 
   return (
     <div className="training-wrapper">
       <div className="training-main-title">
         <div className="training-main-title-content">
           <div className="training-label">
-            <b>NWT Training Academy</b> provides technicians with the training and certification <br /> necessary to
-            become a Matt`s Arm certified technician.
-          </div>
-          {/* <br /> <b>The 1-week course at our Buford GA facility is comprised of:</b>
-          <br />
-          <div className="training-price-box">Price: $999</div>
-          <ul className="training-list">
-            <li>Day 1: Overview and Theory / Equipment / Tools</li>
-            <li>Day 2: Genesis Specific Training</li>
-            <li>Day 3: High-Split Specific Training</li>
-            <li>Day 4: Hands on plus Bucket Safety Training (Jenksinsburg GA)</li>
-            <li>Day 5: Hot Splice / Balancing and troubleshooting (Competency Exam)</li>
-          </ul>
-          <br />
-          <br />
-          <b>Feel free to fill out the form and somebody will be in touch to discuss options.</b> */}
-          <div className="training-ps">
-            <br />
-            <br /> Onward & Upward,
-            <br /> NWT Academy
+            <div className="pre-label">{t('Matt`s arm')}</div>
+            <div className="after-label">{t('Training')}</div>
           </div>
         </div>
       </div>
       <div className="training-content-wrapper">
         <div className="trainig-content">
           <div className="training-title">
-            <h1>Page under construction</h1>
+            <img src={TrainingAcademyLogo} alt="Illustration" className="traiing_academy_logo" />
+            <div className="training-title-body">
+              <br /> is thrilled to partner with Matt's Arm as the exclusive provider of certified training for their
+              revolutionary advanced lifting solution! 💪
+              <br />
+              <br />
+              Together, we’ve collaborated closely with the developers to transform the curriculum into a digital LMS
+              platform 🖥️🚀, designed with tower techs’ familiarity in mind. Paired with our hands-on, in-person
+              practical training, technicians will master cutting-edge skills and earn a globally recognized
+              certification 🏅✅.
+              <br />
+              <br />
+              This credential is widely accepted by major Turf Vendors & Tower Companies, empowering technicians to
+              excel in the industry! 🎯
+            </div>
             <br />
             <br />
+            <CustomButton label="Our courses " onClick={() => window.open(URL, '_blank')} />
             <br />
-            <br />
-            <br />
-            <br />
-            {/* <h1>
-              {t(`${'contact'}`)}&nbsp;
-              {t(`${'us'}`)}
-            </h1> */}
-            {/* <h2>Training Academy Information Form</h2>
-            <p>
-              If you are interested in gaining new knowledge with us, fill out this form to join the academy base. Share
-              your experience and contact details.
-              <br /> "Please note that all the information provided by you will be used solely within New World Telecom
-              LLC and is intended for internal use only. We strictly maintain confidentiality and do not disclose your
-              data to any third parties for marketing purposes"
-            </p> */}
+            <a className="product-overview-link" href={MattsArmPdf} target="_blank" rel="noopener noreferrer">
+              <img className="product-overview-image" src={MattsProd} alt="Matt`s Arm Product Overview" />
+            </a>
           </div>
-          {/* <div className="trining-contact-wrapper">
-                        <div className="training-photos">
-                            <img
-                                src={IllustrationImage}
-                                alt=""
-                            />
-                        </div>
-                        <div className="contact-form">
-                            {!loaded && <LoaderAnimation />}
-                            <iframe
-                                className="my-iframe"
-                                src="https://forms.monday.com/forms/embed/fe366942024b89c1196e92fce9e4808f?r=use1"
-                                frameBorder="0"
-                                border="0"
-                                cellSpacing="0"
-                                onLoad={handleIframeLoad}
-                                title="Training Form"
-                            ></iframe>
-                        </div>
-                    </div> */}
         </div>
       </div>
     </div>
