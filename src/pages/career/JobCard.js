@@ -1,9 +1,10 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { ReactComponent as RemoveIcon } from 'assets/icons/Remove.svg';
+import { ReactComponent as ReadMore } from 'assets/icons/readmore.svg';
 import { ReactComponent as EditIcon } from 'assets/icons/Edit.svg';
 import CustomButton from 'components/customButton/CustomButton';
-import './Career.scss'; // Или создаем отдельный файл стилей для JobCard
+import './JobCard.scss';
 
 const JobCard = ({ job, currentUser, readMore, onReadMore, onDelete, onEdit }) => {
   const { t } = useTranslation();
@@ -23,7 +24,15 @@ const JobCard = ({ job, currentUser, readMore, onReadMore, onDelete, onEdit }) =
           />
         </div>
         <div className="read-more-button" onClick={onReadMore}>
-          {readMore[job.id] ? t('Read less') : t('Read more')}
+          {readMore[job.id] ? (
+            <div className="read-more-button-rotate" title="Read less">
+              <ReadMore style={{ transform: 'rotate(180deg)' }} />
+            </div>
+          ) : (
+            <div className="read-more-button-rotate" title="Read more">
+              <ReadMore />
+            </div>
+          )}
         </div>
         {job.salary && (
           <div className="job-card-salary">
