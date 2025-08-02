@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  .training-main-title {
+  .training-main-title-mattsarm {
     text-align: center;
     color: var(--color-light);
     background: linear-gradient(90deg, rgba(70, 116, 131, 0.9), rgb(255, 255, 255, 0.4), rgba(70, 116, 131, 0.9)),
@@ -17,7 +17,7 @@
     padding: 50px 15px;
     display: flex;
     justify-content: center;
-
+    margin-bottom: 40px;
     .training-main-title-content {
       width: var(--desktop-max-width);
       font-size: 18px;
@@ -156,6 +156,15 @@
           }
         }
       }
+    }
+    .tower-training {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: start;
+      max-width: 900px;
+      padding: 20px;
+      color: var(--color-dark);
     }
   }
 }

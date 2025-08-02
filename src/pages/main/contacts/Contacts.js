@@ -10,6 +10,7 @@ import { ReactComponent as LinkedinIcon } from 'assets/icons/Linkedin.svg';
 import OfficeImage from 'assets/images/office.jpg';
 import ContactForm from 'components/contactForm/contactForm';
 import './Contacts.scss';
+import ContactDetails from './ContactDetails';
 
 const Contacts = () => {
   const { t } = useTranslation();
@@ -21,40 +22,7 @@ const Contacts = () => {
             <div className="pre-label">{t('contact')}</div>
             <div className="after-label">{t('us')}</div>
           </div>
-          <div className="contacts-content">
-            <div className="address">
-              <div className="contact-icon">
-                <LocationIcon />
-              </div>
-              <div className="contact-text">
-                <a
-                  href="https://www.google.com/maps/place/34%C2%B005'15.3%22N+84%C2%B000'03.3%22W/@34.0875831,-84.0015607,232m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d34.087582!4d-84.000917?entry=ttu"
-                  target="blank"
-                >
-                  2400 Satellite Blvd NE, Buford, GA 30518, <b>Suite E</b>
-                </a>
-              </div>
-            </div>
-            <div className="phone">
-              <div className="contact-icon">
-                <PhoneIcon />
-              </div>
-              <div className="contact-text">
-                <a href="tel:+14709252098">+1(470)925-2098</a>
-              </div>
-            </div>
-            <div className="email">
-              <div className="contact-icon">
-                <EmailIcon />
-              </div>
-              <div className="contact-text">
-                <a href="mailto:info@nwt-llc.com">info@nwt-llc.com</a>
-              </div>
-            </div>
-            <div className="work-time">
-              {t('work time1')} <br /> {t('work time2')}
-            </div>
-          </div>
+          <ContactDetails t={t} />
           <div className="contacts-label follow-us">
             <div className="pre-label">{t('follow')}</div>
             <div className="after-label">{t('us')}</div>
