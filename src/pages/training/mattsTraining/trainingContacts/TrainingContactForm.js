@@ -11,7 +11,7 @@ const TrainingContactForm = () => {
 
   return (
     <div className="training-wrapper">
-      <div className="training-main-title">
+      <div className="training-main-title-mattsarm">
         <div className="training-main-title-content">
           <div className="training-label">
             <div className="pre-label">{t('Matt`s arm')}</div>
