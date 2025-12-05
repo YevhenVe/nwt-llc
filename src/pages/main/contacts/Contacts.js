@@ -53,7 +53,7 @@ const Contacts = () => {
       </div>
       <iframe
         className="map"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d826.0757534656881!2d-84.00102474478838!3d34.08737889799626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5959a5794f9df%3A0x75a68ad86afb1573!2sNew%20World%20Telecom%20LLC!5e0!3m2!1sen!2sus!4v1699551204403!5m2!1sen!2sus"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202.58918035197308!2d-79.79507651338093!3d36.02814586762136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885319b0b403a25d%3A0x8c40057d48a45d8c!2s203%20Creek%20Ridge%20Rd%20Suite%20E%2C%20Greensboro%2C%20NC%2027406!5e1!3m2!1sen!2sus!4v1764967260745!5m2!1sen!2sus"
         width="100%"
         height="600"
         allowFullScreen=""

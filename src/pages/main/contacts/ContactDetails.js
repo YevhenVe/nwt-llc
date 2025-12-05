@@ -6,49 +6,50 @@ const ContactDetails = ({ t }) => {
   const ContactDetailsContent = [
     {
       className: 'officeName',
-      text: 'Head office',
+      text: 'North Carolina Head Office',
     },
     {
       className: 'address',
       icon: <LocationIcon />,
-      link: `https://www.google.com/maps/place/34%C2%B005'15.3%22N+84%C2%B000'03.3%22W/@34.0875831,-84.0015607,232m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d34.087582!4d-84.000917?entry=ttu`,
-      text: '2400 Satellite Blvd NE, Buford, GA 30518, Suite E',
+      link: 'https://maps.app.goo.gl/dSBFY4gPNvime47L7',
+      text: '203 Creek Ridge Rd, Greensboro, NC 27406, Suite E',
     },
+    {
+      className: 'phone',
+      icon: <PhoneIcon />,
+      link: 'tel:+14237477608',
+      text: '+1(423)747-7608',
+
+    },
+    {
+      className: 'email',
+      icon: <EmailIcon />,
+      link: 'mailto:info@nwt-llc.com',
+      text: 'brian.gray@nwt-llc.com',
+    },
+    {
+      className: 'officeName',
+      text: 'Georgia Branch Office',
+    },
+    {
+      className: 'address',
+      icon: <LocationIcon />,
+      link: 'https://maps.app.goo.gl/VFpJ7HYHE6Kua5fc7',
+      text: '5055 Old Ellis Point UNIT D25055 Old Ellis Point, Roswell, GA 30076',
+    },
+
     {
       className: 'phone',
       icon: <PhoneIcon />,
       link: 'tel:+14709252098',
       text: '+1(470)925-2098',
     },
-    {
-      className: 'email',
-      icon: <EmailIcon />,
-      link: 'mailto:info@nwt-llc.com',
-      text: 'info@nwt-llc.com',
-    },
-    {
-      className: 'officeName',
-      text: 'North Carolina office',
-    },
-    {
-      className: 'address',
-      icon: <LocationIcon />,
-      link: 'https://maps.app.goo.gl/fyUugTaTF7EsyG3z7',
-      text: '203 Creek Ridge Rd, Greensboro, NC 27406, Suite E',
-    },
-
-    {
-      className: 'phone',
-      icon: <PhoneIcon />,
-      link: 'tel:+14044044040',
-      text: '404-404-4040',
-    },
 
     {
       className: 'email',
       icon: <EmailIcon />,
       link: 'mailto:brian.gray@nwt-llc.com',
-      text: 'brian.gray@nwt-llc.com',
+      text: 'info@nwt-llc.com',
     },
   ];
   return (
