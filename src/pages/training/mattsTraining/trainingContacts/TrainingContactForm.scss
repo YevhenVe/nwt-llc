@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   .training-main-title-mattsarm {
     text-align: center;
     color: var(--color-light);
@@ -18,9 +19,11 @@
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
+
     .training-main-title-content {
       width: var(--desktop-max-width);
       font-size: 18px;
+
       .training-label {
         margin-top: 50px;
         width: 100%;
@@ -32,27 +35,33 @@
         font-size: 42px;
         text-transform: uppercase;
         margin-bottom: 40px;
+
         @media screen and (max-width: 986px) {
           font-size: 28px;
           align-content: center;
           justify-content: center;
         }
+
         .pre-label,
         .after-label {
           filter: drop-shadow(0 0px 15px rgb(255, 255, 255)) drop-shadow(0 0px 15px rgb(255, 255, 255));
         }
+
         .pre-label {
           margin-right: 20px;
           color: var(--accent-color);
         }
+
         .after-label {
           color: rgba(45, 70, 78, 1);
         }
       }
+
       .training-ps {
         text-align: left;
         margin-bottom: 40px;
       }
+
       .training-price-box {
         border-radius: 10px;
         font-weight: 600;
@@ -73,31 +82,38 @@
     width: 100%;
     display: flex;
     justify-content: center;
+
     .trainig-content {
       display: flex;
       align-items: center;
       flex-direction: column;
       width: var(--desktop-max-width);
+
       .training-title {
         text-align: center;
         margin: 40px 0 80px 0;
         color: var(--color-dark);
+
         h1 {
           text-transform: capitalize;
           color: var(--color-dark);
         }
+
         .traiing_academy_logo {
           width: 100%;
           max-width: 400px;
         }
+
         .custom-button-wrapper {
           margin-bottom: 60px;
         }
+
         .product-overview-link {
           .product-overview-image {
             transition: all 0.3s ease;
             filter: drop-shadow(0 0px 5px rgba(0, 0, 0, 0.1)) drop-shadow(0 0px 15px rgba(0, 0, 0, 0.1));
             width: 300px;
+
             &:hover {
               transform: translateY(-15px) scale(1.05);
               filter: drop-shadow(0 20px 15px rgba(0, 0, 0, 0.1)) drop-shadow(0 10px 15px rgba(0, 0, 0, 0.25));
@@ -105,26 +121,32 @@
           }
         }
       }
+
       .training-title-body {
         max-width: 900px;
         text-align: left;
       }
+
       .trining-contact-wrapper {
         display: flex;
         justify-content: center;
         position: relative;
         width: 100%;
         margin-bottom: 60px;
+
         @media screen and (max-width: 900px) {
           flex-wrap: wrap;
         }
+
         .training-photos {
           margin: 0 15px;
           width: 100%;
           max-width: 550px;
+
           img {
             width: 100%;
             filter: drop-shadow(0 7px 10px rgba(0, 0, 0, 0.2));
+
             @media screen and (max-width: 900px) {
               margin-bottom: 40px;
             }
@@ -139,16 +161,19 @@
           min-height: 800px;
           border-radius: 10px;
           overflow-x: hidden;
+
           @media screen and (max-width: 720px) {
             min-width: 100%;
             height: 800px;
           }
+
           svg {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
           }
+
           .my-iframe {
             height: 100%;
             width: 100%;
@@ -157,11 +182,12 @@
         }
       }
     }
+
     .tower-training {
       display: flex;
       flex-direction: column;
-      align-items: start;
-      justify-content: start;
+      align-items: flex-start;
+      justify-content: flex-start;
       max-width: 900px;
       padding: 20px;
       color: var(--color-dark);

@@ -13,23 +13,28 @@
   font-size: 42px;
   text-transform: uppercase;
   margin-bottom: 40px;
+
   @media screen and (max-width: 986px) {
     font-size: 28px;
     align-content: center;
     justify-content: center;
   }
+
   .pre-label,
   .after-label {
     filter: drop-shadow(0 0px 15px rgb(255, 255, 255)) drop-shadow(0 0px 15px rgb(255, 255, 255));
   }
+
   .pre-label {
     margin-right: 20px;
     color: var(--accent-color);
   }
+
   .after-label {
     color: rgba(45, 70, 78, 1);
   }
 }
+
 .career-page-wrapper {
   display: flex;
   flex-direction: column;
@@ -38,28 +43,34 @@
   height: 100%;
   margin-bottom: 200px;
   padding: 0 25px;
+
   .no-opportunities {
     margin-bottom: 25px;
   }
+
   .new-career-opportunity-form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: start;
+    align-items: flex-start;
     width: 100%;
     max-width: 900px;
     color: var(--color-dark);
     margin-bottom: 30px;
+
     .add-new-job-button {
       margin-bottom: 45px;
+
       &:disabled {
         opacity: 0.5;
         cursor: not-allowed;
+
         &:hover {
           scale: 1;
         }
       }
     }
+
     .custom-quill {
       width: 100%;
     }
@@ -67,9 +78,10 @@
     .salary-checkbox {
       width: 100%;
       display: flex;
-      justify-content: start;
+      justify-content: flex-start;
     }
   }
+
   .filters-container {
     display: flex;
     flex-direction: row;
@@ -77,31 +89,39 @@
     width: 100%;
     max-width: 900px;
     margin-bottom: 20px;
+
     .MuiInputBase-root {
       border-radius: 15px;
     }
+
     .MuiFormControl-root {
       background-color: var(--color-light);
       width: 200px;
       color: var(--color-dark);
+
       .MuiChip-root {
         background-color: var(--color-primary);
       }
+
       .MuiFormLabel-root {
         color: var(--color-dark);
       }
     }
   }
 }
+
 .vh100 {
   height: 100vh;
 }
+
 .MuiPaper-root {
   margin-top: 20px;
   border-radius: 15px !important;
   background-color: var(--second-color-dark) !important;
+
   li {
     color: var(--color-dark);
+
     svg {
       fill: var(--color-dark);
     }
