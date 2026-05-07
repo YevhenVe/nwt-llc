@@ -1,6 +1,5 @@
 import React from "react";
 import SpecializeCard from "./specializeCard/SpecializeCard";
-import SpecializeCardInfo from "./specializeCard/SpecializeCard.json";
 import { useTranslation } from "react-i18next";
 
 import "./About.scss";

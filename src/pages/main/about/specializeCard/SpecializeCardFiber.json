@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1,
+    "image": "https://prime-fiber.com/wp-content/uploads/2024/09/Project-Management%E2%80%A8and-Coordination.jpg",
+    "title": "Engineering and Planning",
+    "items": {
+      "item1": "Network Design Engineering",
+      "item2": "Permitting",
+      "item3": "Research and Development",
+      "item4": "Utilizing Industry Software",
+      "item5": "Project Management And Coordination"
+    }
+  },
+  {
+    "id": 2,
+    "image": "https://prime-fiber.com/wp-content/uploads/2024/09/Coaxial.jpg",
+    "title": "Cable Construction",
+    "items": {
+      "item1": "Locating",
+      "item2": "OSP Cabling UG and Aerial",
+      "item3": "Pole Transfer",
+      "item4": "MDU and Drop Installation",
+      "item5": "Fiber Middle Mile Construction",
+      "item6": "Copper and Coax Systems"
+    }
+  },
+  {
+    "id": 3,
+    "image": "https://prime-fiber.com/wp-content/uploads/2024/11/Trenching.jpg",
+    "title": "Underground",
+    "items": {
+      "item1": "Cable Blowing / Pulling",
+      "item2": "Trenching",
+      "item3": "Conduit and Manhole Construction",
+      "item4": "Horizontal Directional Drilling",
+      "item5": "Micro-Trenching"
+    }
+  },
+  {
+    "id": 4,
+    "image": "https://prime-fiber.com/wp-content/uploads/2024/09/Splicing.jpg",
+    "title": "Splicing",
+    "items": {
+      "item1": "Fiber Splicing",
+      "item2": "Testing",
+      "item3": "Maintenance"
+    }
+  },
+  {
+    "id": 5,
+    "image": "https://prime-fiber.com/wp-content/uploads/2024/11/Disaster-restoration.jpg",
+    "title": "Maintenance & Restoration",
+    "items": {
+      "item1": "Disaster Restoration",
+      "item2": "Emergency Repairs",
+      "item3": "BAU"
+    }
+  },
+  {
+    "id": 6,
+    "image": "https://prime-fiber.com/wp-content/uploads/2024/09/New-tower-construction.jpg",
+    "title": "Wireless Construction",
+    "items": {
+      "item1": "New Tower Construction & Service",
+      "item2": "5G Small Cell / C-RAN Construction",
+      "item3": "Upgrades & Modifications",
+      "item4": "Maintenance (Troubleshooting)",
+      "item5": "Special Projects"
+    }
+  }
+]
