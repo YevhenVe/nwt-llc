@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { LoadedContext } from 'contexts/Context';
@@ -15,22 +15,59 @@ const Home = () => {
   const handleClose = () => setOpen(false);
   const navigate = useNavigate();
   const { t } = useTranslation();
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Trigger entrance animations after mount
+    const timer = setTimeout(() => setIsVisible(true), 200);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="wrapper-home" name="home">
       <video autoPlay muted loop>
         <source src="https://nwt-llc.com/static/media/herovideo.mp4" type="video/mp4" />
       </video>
-      <div className="home-content-wrapper">
-        <div className="pre-title">{t('COMMUNICATIONS SOLUTIONS')}</div>
-        <div className="slogan">Plan, Execute, Deliver! </div>
-        <CustomButton label={t('Career Opportunities')} onClick={() => navigate('/career')} />
-        <Link className="link" activeClass="active" to="about" smooth spy offset={-59} duration={300}>
-          <div className="arrow-down">
-            <ArrowDownIcon />
+      <div className="hero-overlay" />
+      <div className={`home-content-wrapper ${isVisible ? 'visible' : ''}`}>
+        <div className="hero-badge">
+          <span className="badge-dot" />
+          {t('COMMUNICATIONS SOLUTIONS')}
+        </div>
+        <h1 className="hero-headline">
+          Plan, <span className="highlight">Execute</span>, Deliver!
+        </h1>
+        <p className="hero-subtitle">
+          {t('Building reliable networks and communication infrastructure for a connected future.')}
+        </p>
+        <div className="hero-actions">
+          <CustomButton label={t('Career Opportunities')} onClick={() => navigate('/career')} />
+          <Link className="ghost-btn" activeClass="active" to="about" smooth spy offset={-59} duration={300}>
+            {t('Learn More')}
+          </Link>
+        </div>
+        <div className="hero-stats">
+          <div className="stat-item">
+            <span className="stat-number">10+</span>
+            <span className="stat-label">{t('Years Experience')}</span>
           </div>
-        </Link>
+          <div className="stat-divider" />
+          <div className="stat-item">
+            <span className="stat-number">3000+</span>
+            <span className="stat-label">{t('Projects Done')}</span>
+          </div>
+          <div className="stat-divider" />
+          <div className="stat-item">
+            <span className="stat-number">100%</span>
+            <span className="stat-label">{t('Client Trust')}</span>
+          </div>
+        </div>
       </div>
+      <Link className="link" activeClass="active" to="about" smooth spy offset={-59} duration={300}>
+        <div className="arrow-down">
+          <ArrowDownIcon />
+        </div>
+      </Link>
       <Modal open={open} onClose={handleClose}>
         <>
           <div className="modal-content">
