@@ -1,68 +1,251 @@
-.specialize-card-box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  @media screen and (max-width: 1050px) {
+@use "styles/Variables.scss";
+
+// ─── Specialize Section ──────────────────────────────────────────────────────
+
+.specialize-section {
+    width: 100%;
+}
+
+// ─── Category Selector ───────────────────────────────────────────────────────
+
+.category-selector {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 40px;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding: 0 20px;
+    }
+}
+
+.category-card {
+    position: relative;
+    display: flex;
+    align-items: center;
     gap: 20px;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media screen and (max-width: 685px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .specialize-card-wrapper {
-    min-width: 320px;
-    max-width: 320px;
-    height: 512px;
-    border-radius: 5px;
-    box-shadow: var(--main-shadow);
-    justify-self: center;
-    margin: 25px 25px;
-    flex-basis: calc(100% / 3);
-    transition: all 300ms ease-in-out;
+    width: 420px;
+    padding: 28px 32px;
+    border-radius: 16px;
+    cursor: pointer;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        max-width: 420px;
+        padding: 22px 24px;
+        gap: 16px;
+    }
+
+    // Glow effect on hover
+    .category-card-glow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        filter: blur(80px);
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        transition: opacity 0.4s ease;
+        pointer-events: none;
+    }
+
     &:hover {
-      scale: 1.05;
-      transform: scaleY(1.05);
-    }
-    .specialize-card-top {
-      position: relative;
-      height: 195px;
-      img {
-        width: 100%;
-        height: 195px;
-        border-radius: 5px;
-        object-fit: cover;
-      }
-      .specialize-card-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 195px;
-        background: linear-gradient(360deg, rgb(23, 35, 39) 0%, rgba(56, 64, 94, 0) 100%);
-      }
-      .specialize-card-title {
-        position: absolute;
-        bottom: 20px;
-        font-weight: 600;
-        font-size: 20px;
-        left: 10%;
-        color: var(--color-light);
-      }
-    }
-    .specialize-card-bottom {
-      // overflow-y: auto;
-      height: fit-content;
-      padding: 30px;
-      color: var(--color-dark);
-      ul {
-        // list-style: none;
-        padding: 0 10px;
-        li {
-          margin-bottom: 10px;
-          font-size: 14px;
+        transform: translateY(-4px);
+        border-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+
+        .category-card-glow {
+            opacity: 0.15;
         }
-      }
+
+        .category-card-arrow {
+            transform: translateX(4px);
+        }
     }
-  }
+
+    &.active {
+        border-color: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+
+        .category-card-glow {
+            opacity: 0.2;
+        }
+
+        .category-card-arrow svg {
+            transform: rotate(90deg);
+        }
+    }
+
+    .category-card-icon {
+        flex-shrink: 0;
+        width: 56px;
+        height: 56px;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 48px;
+            height: 48px;
+        }
+    }
+
+    .category-card-text {
+        flex: 1;
+        min-width: 0;
+
+        h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            letter-spacing: -0.3px;
+
+            @media screen and (max-width: 768px) {
+                font-size: 18px;
+            }
+        }
+
+        p {
+            font-size: 13px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.55);
+            line-height: 1.4;
+            margin: 0;
+        }
+    }
+
+    .category-card-arrow {
+        flex-shrink: 0;
+        transition: transform 0.3s ease;
+
+        svg {
+            display: block;
+            transition: transform 0.3s ease;
+        }
+    }
+}
+
+// ─── Services Panel (expandable) ─────────────────────────────────────────────
+
+.services-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+    &.open {
+        max-height: 2400px;
+    }
+}
+
+// ─── Service Cards Grid ──────────────────────────────────────────────────────
+
+.specialize-card-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    padding: 10px 0 40px;
+    animation: fadeInCards 0.5s ease forwards;
+
+    @media screen and (max-width: 1050px) {
+        gap: 20px;
+    }
+
+    .specialize-card-wrapper {
+        min-width: 320px;
+        max-width: 320px;
+        height: 512px;
+        border-radius: 12px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+        justify-self: center;
+        margin: 25px 25px;
+        flex-basis: calc(100% / 3);
+        transition: all 300ms ease-in-out;
+        overflow: hidden;
+        background: var(--color-light);
+        border: 1px solid rgba(0, 0, 0, 0.06);
+
+        @media screen and (max-width: 768px) {
+            min-width: 280px;
+            max-width: 340px;
+            margin: 12px 10px;
+        }
+
+        &:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+        }
+
+        .specialize-card-top {
+            position: relative;
+            height: 195px;
+
+            img {
+                width: 100%;
+                height: 195px;
+                border-radius: 12px 12px 0 0;
+                object-fit: cover;
+            }
+
+            .specialize-card-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 195px;
+                border-radius: 12px 12px 0 0;
+                background: linear-gradient(360deg, rgb(23, 35, 39) 0%, rgba(56, 64, 94, 0) 100%);
+            }
+
+            .specialize-card-title {
+                position: absolute;
+                bottom: 20px;
+                left: 10%;
+                font-weight: 600;
+                font-size: 20px;
+                color: var(--color-light);
+            }
+        }
+
+        .specialize-card-bottom {
+            height: fit-content;
+            padding: 30px;
+            color: var(--color-dark);
+
+            ul {
+                padding: 0 10px;
+
+                li {
+                    margin-bottom: 10px;
+                    font-size: 14px;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}
+
+// ─── Animations ──────────────────────────────────────────────────────────────
+
+@keyframes fadeInCards {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
